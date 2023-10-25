@@ -24,8 +24,8 @@ Route::get('/backend',[App\Http\Controllers\Modules\Admin\HomeController::class,
 
 Route::get('/admin/product',[App\Http\Controllers\Modules\Admin\ProductController::class, 'index'])->name('adminproduct');
 Route::post('/admin/addproduct',[App\Http\Controllers\Modules\Admin\ProductController::class,'addProduct'])->name('adminaddproduct');
-Route::get('/admin/editproduct/{id}',[App\Http\Controllers\Modules\Admin\ProductController::class,'editProduct']);
-Route::get('/admin/deleteproduct/{id}',[App\Http\Controllers\Modules\Admin\ProductController::class,'deleteProduct']);
+Route::get('/admin/editProduct/{id}',[App\Http\Controllers\Modules\Admin\ProductController::class,'editProduct']);
+Route::get('/admin/deleteProduct/{id}',[App\Http\Controllers\Modules\Admin\ProductController::class,'deleteProduct']);
 Route::get('/admin/productTable',[App\Http\Controllers\Modules\Admin\ProductController::class,'productTable'])->name('adminproducttable');
 Route::get('/admin/productlist',[App\Http\Controllers\Modules\Admin\ProductlistController::class, 'index'])->name('adminlistproduct');
 

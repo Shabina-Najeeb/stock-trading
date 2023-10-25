@@ -91,6 +91,7 @@ $(document).ready(function(){
             });
             
             $(document).on('click','.user-edit-class',function(e){
+                // alert('hi')
                 e.preventDefault();
                 var id=$(this).attr('id');
                 $('#addUserButton,#newUserButton').hide();
