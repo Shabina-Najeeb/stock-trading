@@ -107,8 +107,8 @@ $(document).ready(function(){
             $('#newProductButton').click(function(e){
                 e.preventDefault();
                 $('#product_form')[0].reset();
-                categoryId='';
-                $('#productHiddenId').val(categoryId);
+               productId='';
+                $('#productHiddenId').val(productId);
                 $('#form_result').html('');
                 $('#addProductButton').show();
                 $('#updateProductButton,#newProductButton,#deleteProductButton').hide();

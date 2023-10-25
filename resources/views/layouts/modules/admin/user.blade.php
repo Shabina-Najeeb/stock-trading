@@ -1,6 +1,382 @@
-@extends('layouts.backend_dashboard')
+
+@extends('layouts.common_home')
 
 @section('content')
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="description" content="Neon Admin Panel" />
+	<meta name="author" content="" />
+
+	<link rel="icon" href="{{asset('assets/backend/images/favicon.ico')}}">
+
+	<title>Neon | Dashboard</title>
+
+	<link rel="stylesheet" href="{{asset('assets/backend/js/jquery-ui/css/no-theme/jquery-ui-1.10.3.custom.min.css')}}">
+	<link rel="stylesheet" href="{{asset('assets/backend/css/font-icons/entypo/css/entypo.css')}}">
+	<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Noto+Sans:400,700,400italic">
+	<link rel="stylesheet" href="{{asset('assets/backend/css/bootstrap.css')}}">
+	<link rel="stylesheet" href="{{asset('assets/backend/css/neon-core.css')}}">
+	<link rel="stylesheet" href="{{asset('assets/backend/css/neon-theme.css')}}">
+	<link rel="stylesheet" href="{{asset('assets/backend/css/neon-forms.css')}}">
+	<link rel="stylesheet" href="{{asset('assets/backend/css/custom.css')}}">
+
+	<script src="{{asset('assets/backend/js/jquery-1.11.3.min.js')}}"></script>
+
+	<!--[if lt IE 9]><script src="assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+	
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+
+
+</head>
+<body class="page-body  page-fade" data-url="http://neon.dev">
+
+<div class="page-container"><!-- add class "sidebar-collapsed" to close sidebar by default, "chat-visible" to make chat appear always -->
+	
+	<div class="sidebar-menu">
+
+		<div class="sidebar-menu-inner">
+			
+			
+			
+			
+			
+			
+									
+        <ul id="main-menu" class="main-menu">
+				<!-- add class "multiple-expanded" to allow multiple submenus to open -->
+				<!-- class "auto-inherit-active-class" will automatically add "active" class for parent elements who are marked already with class "active" -->
+				<li class="active opened active has-sub">
+					<a href="/backend">
+						<i class="entypo-gauge"></i>
+						<span class="title">Dashboard</span>
+					</a>
+					
+				</li>
+
+                <li class="has-sub">
+					<a href="/admin/product">
+						<i class="entypo-doc-text"></i>
+						<span class="title">Product Management</span>
+					</a>
+                    <a href="/admin/productlist">
+						<i class="entypo-doc-text"></i>
+						<span class="title">Product List</span>
+					</a>
+                    <a href="/admin/risk">
+						<i class="entypo-doc-text"></i>
+						<span class="title">Risk Control Management</span>
+					</a>
+					
+				</li>
+
+
+
+
+
+                <li class="has-sub">
+					<a href="#">
+						<i class="entypo-gauge"></i>
+						<span class="title">Order Management</span>
+					</a>
+                    <ul>
+					<li>
+							<a href="#">
+								<span class="title">Transaction Flow</span>
+							</a>
+						</li>
+                        <li>
+							<a href="#">
+								<span class="title">Closing Log</span>
+							</a>
+						</li>
+						
+					
+					</ul>
+                   	
+				</li>
+				
+                
+				
+				
+				
+				
+				
+				</li>
+			</ul>
+			
+		</div>
+
+	</div>
+
+	<div class="main-content">
+				
+		<div class="row">
+		
+			<!-- Profile Info and Notifications -->
+			<div class="col-md-6 col-sm-8 clearfix">
+		
+				<ul class="user-info pull-left pull-none-xsm">
+		
+					<!-- Profile Info -->
+					<li class="profile-info dropdown"><!-- add class "pull-right" if you want to place this from right -->
+		
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+							<img src="{{asset('assets/backend/images/thumb-1@2x.png')}}" alt="" class="img-circle" width="44" />
+							John Henderson
+						</a>
+		
+						<ul class="dropdown-menu">
+		
+							<!-- Reverse Caret -->
+							<li class="caret"></li>
+		
+							<!-- Profile sub-links -->
+							<li>
+								<a href="extra-timeline.html">
+									<i class="entypo-user"></i>
+									Edit Profile
+								</a>
+							</li>
+		
+							<li>
+								<a href="mailbox.html">
+									<i class="entypo-mail"></i>
+									Inbox
+								</a>
+							</li>
+		
+							<li>
+								<a href="extra-calendar.html">
+									<i class="entypo-calendar"></i>
+									Calendar
+								</a>
+							</li>
+		
+							<li>
+								<a href="#">
+									<i class="entypo-clipboard"></i>
+									Tasks
+								</a>
+							</li>
+						</ul>
+					</li>
+		
+				</ul>
+				<ul class="user-info pull-left pull-right-xs pull-none-xsm">
+<li class="notifications dropdown">
+		
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+            <i class="entypo-attention"></i>
+            <span class="badge badge-info">6</span>
+        </a>
+
+        <ul class="dropdown-menu">
+            <li class="top">
+                <p class="small">
+                    <a href="#" class="pull-right">Mark all Read</a>
+                    You have <strong>3</strong> new notifications.
+                </p>
+            </li>
+            
+            <li>
+                <ul class="dropdown-menu-list scroller">
+                    <li class="unread notification-success">
+                        <a href="#">
+                            <i class="entypo-user-add pull-right"></i>
+                            
+                            <span class="line">
+                                <strong>New user registered</strong>
+                            </span>
+                            
+                            <span class="line small">
+                                30 seconds ago
+                            </span>
+                        </a>
+                    </li>
+                    
+                    <li class="unread notification-secondary">
+                        <a href="#">
+                            <i class="entypo-heart pull-right"></i>
+                            
+                            <span class="line">
+                                <strong>Someone special liked this</strong>
+                            </span>
+                            
+                            <span class="line small">
+                                2 minutes ago
+                            </span>
+                        </a>
+                    </li>
+                    
+                    <li class="notification-primary">
+                        <a href="#">
+                            <i class="entypo-user pull-right"></i>
+                            
+                            <span class="line">
+                                <strong>Privacy settings have been changed</strong>
+                            </span>
+                            
+                            <span class="line small">
+                                3 hours ago
+                            </span>
+                        </a>
+                    </li>
+                    
+                    <li class="notification-danger">
+                        <a href="#">
+                            <i class="entypo-cancel-circled pull-right"></i>
+                            
+                            <span class="line">
+                                John cancelled the event
+                            </span>
+                            
+                            <span class="line small">
+                                9 hours ago
+                            </span>
+                        </a>
+                    </li>
+                    
+                    <li class="notification-info">
+                        <a href="#">
+                            <i class="entypo-info pull-right"></i>
+                            
+                            <span class="line">
+                                The server is status is stable
+                            </span>
+                            
+                            <span class="line small">
+                                yesterday at 10:30am
+                            </span>
+                        </a>
+                    </li>
+                    
+                    <li class="notification-warning">
+                        <a href="#">
+                            <i class="entypo-rss pull-right"></i>
+                            
+                            <span class="line">
+                                New comments waiting approval
+                            </span>
+                            
+                            <span class="line small">
+                                last week
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            
+            <li class="external">
+                <a href="#">View all notifications</a>
+            </li>
+        </ul>
+
+    </li>
+
+    <!-- Message Notifications -->
+    <li class="notifications dropdown">
+
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+            <i class="entypo-mail"></i>
+            <span class="badge badge-secondary">10</span>
+        </a>
+
+        <ul class="dropdown-menu">
+            <li>
+                <form class="top-dropdown-search">
+                    
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search anything..." name="s" />
+                    </div>
+                    
+                </form>
+                
+                <ul class="dropdown-menu-list scroller">
+                    <li class="active">
+                        <a href="#">
+                            <span class="image pull-right">
+                                <img src="assets/images/thumb-1@2x.png" width="44" alt="" class="img-circle" />
+                            </span>
+                            
+                            <span class="line">
+                                <strong>Luc Chartier</strong>
+                                - yesterday
+                            </span>
+                            
+                            <span class="line desc small">
+                                This ain’t our first item, it is the best of the rest.
+                            </span>
+                        </a>
+                    </li>
+                    
+                    <li class="active">
+                        <a href="#">
+                            <span class="image pull-right">
+                                <img src="assets/images/thumb-2@2x.png" width="44" alt="" class="img-circle" />
+                            </span>
+                            
+                            <span class="line">
+                                <strong>Salma Nyberg</strong>
+                                - 2 days ago
+                            </span>
+                            
+                            <span class="line desc small">
+                                Oh he decisively impression attachment friendship so if everything. 
+                            </span>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="#">
+                            <span class="image pull-right">
+                                <img src="assets/images/thumb-3@2x.png" width="44" alt="" class="img-circle" />
+                            </span>
+                            
+                            <span class="line">
+                                Hayden Cartwright
+                                - a week ago
+                            </span>
+                            
+                            <span class="line desc small">
+                                Whose her enjoy chief new young. Felicity if ye required likewise so doubtful.
+                            </span>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="#">
+                            <span class="image pull-right">
+                                <img src="assets/images/thumb-4@2x.png" width="44" alt="" class="img-circle" />
+                            </span>
+                            
+                            <span class="line">
+                                Sandra Eberhardt
+                                - 16 days ago
+                            </span>
+                            
+                            <span class="line desc small">
+                                On so attention necessary at by provision otherwise existence direction.
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            
+            <li class="external">
+                <a href="mailbox.html">All Messages</a>
+            </li>
+        </ul>
+
+    </li>
 <ul class="user-info pull-left pull-right-xs pull-none-xsm">
 		
         <!-- Raw Notifications -->
@@ -395,8 +771,6 @@
 
 </div>
 
-</div>
-
 <hr />
 
         <ol class="breadcrumb bc-3" >
@@ -457,9 +831,17 @@
                         <input type="text" class="form-control" name= "name"id="name" placeholder="please enter your name">
                     
                 </div>
+
+                <div class="col-md-3">
+                    <label for="field-2" class="col-sm-6 control-label">User ID</label>
+                    
+                   
+                        <input type="text" class="form-control" name= "userid"id="userid" placeholder="please enter your name">
+                    
+                </div>
                 <div class="col-md-3">
                     
-                    <label for="field-2" class="col-sm-6 control-label">Login Password</label>
+                    <label for="field-2" class="col-sm-12 control-label">Login Password</label>
                 
                         <input type="password" class="form-control"  name= "login_pword" id="login_pword" placeholder="please enter login password">
                     
@@ -470,7 +852,7 @@
 
                 <div class="form-group">
                 <div class="col-md-3">
-                    <label for="field-1" class="col-sm-6 control-label">Transaction Password</label>
+                    <label for="field-1" class="col-sm-12 control-label">Transaction Password</label>
                     
                   
                         <input type="password" class="form-control"  name= "transaction_pword"id="transaction_pword" placeholder="please enter transaction password">
@@ -509,7 +891,7 @@
                     <button type="submit" value="Add" id="addUserButton" class="btn btn-success">Save</button>
                     <button type="submit"   value="Edit" id="updateUsertButton"class="btn btn-orange">Edit</button>
                     <button type="submit"   value="Delete" id="deleteUserButton"class="btn btn-danger">Delete</button>
-                    <button type="button" value="Add" id="newUserButton" class="btn btn-blue">New</button>
+                    <button type="button" value="New" id="newUserButton" class="btn btn-blue">New</button>
                     </div>
                 </div>
             </form>
@@ -523,13 +905,13 @@
 
 
 
-<h3>Table without DataTable Header</h3>
+<h3>User Table</h3>
 
 
 
 
 
-<table class="table table-bordered table-striped datatable" id="productTable">
+<table class="table table-bordered table-striped datatable" id="userTable">
 <thead>
 <tr>
     <th>
@@ -545,7 +927,7 @@
 </tr>
 </thead>
 
-<tbody id="productTbody">
+<tbody id="userTbody">
 
 
 

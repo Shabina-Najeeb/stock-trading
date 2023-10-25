@@ -28,6 +28,14 @@ Route::get('/admin/editproduct/{id}',[App\Http\Controllers\Modules\Admin\Product
 Route::get('/admin/deleteproduct/{id}',[App\Http\Controllers\Modules\Admin\ProductController::class,'deleteProduct']);
 Route::get('/admin/productTable',[App\Http\Controllers\Modules\Admin\ProductController::class,'productTable'])->name('adminproducttable');
 Route::get('/admin/productlist',[App\Http\Controllers\Modules\Admin\ProductlistController::class, 'index'])->name('adminlistproduct');
+
 Route::get('/admin/user',[App\Http\Controllers\Modules\Admin\UserController::class, 'index'])->name('adminUser');
+Route::post('/admin/adduser',[App\Http\Controllers\Modules\Admin\UserController::class,'addUser'])->name('adminUseradd');
+Route::get('/admin/edituser/{id}',[App\Http\Controllers\Modules\Admin\UserController::class,'editUser']);
+Route::get('/admin/deleteuser/{id}',[App\Http\Controllers\Modules\Admin\UserController::class,'deleteUser']);
+Route::get('/admin/userTable',[App\Http\Controllers\Modules\Admin\UserController::class,'userTable'])->name('adminUsertable');
+
+
+
 Route::get('/admin/risk',[App\Http\Controllers\Modules\Admin\RiskController::class, 'index'])->name('adminRiskControl');
 

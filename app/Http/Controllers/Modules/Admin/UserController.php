@@ -29,7 +29,7 @@ class UserController extends Controller
                 'name' => 'required',
                 'login_pword' => 'required',
                 'transaction_pword' => 'required',
-                'balence' => 'required',
+                'balance' => 'required',
                
                
             );
@@ -38,14 +38,15 @@ class UserController extends Controller
                 return response()->json(['errors' => $error->errors()->all()]);
             }
 
-            $product = Userdetails::find($request->userHiddenId);
-            $product->useraccount = $request->useraccount;
+            $userdetails = Userdetails::find($request->userHiddenId);
+            $userdetails->useraccount = $request->useraccount;
        
-            $product->name = $request->name;
-            $product->login_pword = $request->login_pword ;
-            $product->transaction_pword = $request->transaction_pword;
-            $product->balence = $request->balence;
-            $product->member = $request->member;
+            $userdetails->name = $request->name;
+            $userdetails->userid = $request->userid;
+            $userdetails->login_pword = $request->login_pword ;
+            $userdetails->transaction_pword = $request->transaction_pword;
+            $userdetails->balance = $request->balance;
+            $userdetails->member = $request->member;
             
            
    
@@ -68,7 +69,7 @@ class UserController extends Controller
                 'name' => 'required',
                 'login_pword' => 'required',
                 'transaction_pword' => 'required',
-                'balence' => 'required',
+                'balance' => 'required',
                
             );
             $error = Validator::make($request->all(), $rules);
@@ -80,9 +81,10 @@ class UserController extends Controller
             $userdetails->useraccount = $request->useraccount;
        
             $userdetails->name = $request->name;
+            $userdetails->userid = $request->userid;
             $userdetails->login_pword = $request->login_pword ;
             $userdetails->transaction_pword = $request->transaction_pword;
-            $userdetails->balence = $request->balence;
+            $userdetails->balance = $request->balance;
             $userdetails->member = $request->member;
             
            
