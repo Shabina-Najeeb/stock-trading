@@ -83,7 +83,7 @@
 
 
                 <li class="has-sub">
-					<a href="#">
+					<a href="/admin/order">
 						<i class="entypo-gauge"></i>
 						<span class="title">Order Management</span>
 					</a>

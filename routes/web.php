@@ -6,6 +6,7 @@ use App\Http\Controllers\Modules\Admin\ProductController;
 use App\Http\Controllers\Modules\Admin\ProductlistController;
 use App\Http\Controllers\Modules\Admin\UserController;
 use App\Http\Controllers\Modules\Admin\RiskController;
+use App\Http\Controllers\Modules\Admin\OrdersController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -38,4 +39,5 @@ Route::get('/admin/userTable',[App\Http\Controllers\Modules\Admin\UserController
 
 
 Route::get('/admin/risk',[App\Http\Controllers\Modules\Admin\RiskController::class, 'index'])->name('adminRiskControl');
+Route::get('/admin/order',[App\Http\Controllers\Modules\Admin\OrdersController::class, 'index'])->name('adminRiskControl');
 
