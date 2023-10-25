@@ -103,7 +103,7 @@ class UserController extends Controller
      public function userTable()
      {
 
-        //  return view("layouts.modules.admin.product_list");
+      
          $user = Userdetails::all();
  
          return response()->json([

@@ -96,9 +96,9 @@ $(document).ready(function(){
                         for(var i=0;i<(productList[0].length);i++){
                             data+='<tr><td>'+(i+1)+'</td>';
                             data+='<td>'+productList[0][i].productname+'</td>';
-                            data+='<td>'+productList[0][i].productmodel+'</td>';
+                            data+='<td>'+productList[0][i].productcode+'</td>';
                             data+='<td>'+'<div class="option-box"><class="option-list"><button type="button" data-text="View recored" id="'+productList[0][i].id+'" class="product-edit-class">';
-                            data+='<span class="fas fa-edit nav-icon""></span></button></div>'+'</td></tr>';
+                            data+='<span class="btn btn-blue"></span></button></div>'+'</td></tr>';
                         }
                              $('#productTbody,#productTable').html(data);
                       }
@@ -127,41 +127,42 @@ $(document).ready(function(){
                     success:function(data)
                     {
                         $('#form_result').html('');
-                        $('#product_form')[0].reset();
+                        // $('#product_form')[0].reset();
                         $('#addProductButton,#newProductButton').hide();
                         //form display
-                        productId=data.product_FormData.id;
+                        productId=data.data.id;
                         $('#productHiddenId').val(productId);
-                        $('#productname').val(data.product_FormData.productname);
-                     
-                $('#productcode').val(data.product_FormData.productcode);
-                $('#homepage').val(data.product_FormData.homepage);
-                $('#producticon').val(data.product_FormData.producticon);
-                $('#minimumrisk').val(data.product_FormData.minimumrisk);
-                $('#maximumrisk').val(data.product_FormData.maximumrisk);
-                $('#randomrange').val(data.product_FormData.randomrange);
-                $('#time1').val(data.product_FormData.timeplay1);
-                $('#time2').val(data.product_FormData.timeplay2);
-                $('#time3').val(data.product_FormData.timeplay3);
-                $('#time4').val(data.product_FormData.timeplay4);
-                $('#profit1').val(data.product_FormData.profit1);
-                $('#profit2').val(data.product_FormData.profit2);
-                $('#profit3').val(data.product_FormData.profit3);
-                $('#profit4').val(data.product_FormData.profit4);
-                $('#loss1').val(data.product_FormData.loss1);
-                $('#loss2').val(data.product_FormData.loss2);
-                $('#loss3').val(data.product_FormData.loss3);
-                $('#loss4').val(data.product_FormData.loss4);
-                $('#earningratio').val(data.product_FormData.earningratio);
-                $('#floatingratio').val(data.product_FormData.floatingratio);
-                $('#monday').val(data.product_FormData.mon);
-                $('#tuesday').val(data.product_FormData.tue);
-                $('#wednesday').val(data.product_FormData.wed);
-                $('#thursaday').val(data.product_FormData.thur);
-                $('#friday').val(data.product_FormData.fri);
-                $('#satarday').val(data.product_FormData.sat);
-                $('#sunday').val(data.product_FormData.sun);
-                $('#productnote').val(data.product_FormData.productnote);   
+                      
+                       
+                 $('#productname').val(data.data.productname);
+                $('#productcode').val(data.data.productcode);
+                $('#homepage').val(data.data.homepage);
+                $('#producticon').val(data.data.producticon);
+                $('#minimumrisk').val(data.data.minimumrisk);
+                $('#maximumrisk').val(data.data.maximumrisk);
+                $('#randomrange').val(data.data.randomrange);
+                $('#time1').val(data.data.timeplay1);
+                $('#time2').val(data.data.timeplay2);
+                $('#time3').val(data.data.timeplay3);
+                $('#time4').val(data.data.timeplay4);
+                $('#profit1').val(data.data.profit1);
+                $('#profit2').val(data.data.profit2);
+                $('#profit3').val(data.data.profit3);
+                $('#profit4').val(data.data.profit4);
+                $('#loss1').val(data.data.loss1);
+                $('#loss2').val(data.data.loss2);
+                $('#loss3').val(data.data.loss3);
+                $('#loss4').val(data.data.loss4);
+                $('#earningratio').val(data.data.earningratio);
+                $('#floatingratio').val(data.data.floatingratio);
+                $('#monday').val(data.data.mon);
+                $('#tuesday').val(data.data.tue);
+                $('#wednesday').val(data.data.wed);
+                $('#thursaday').val(data.data.thur);
+                $('#friday').val(data.data.fri);
+                $('#satarday').val(data.data.sat);
+                $('#sunday').val(data.data.sun);
+                $('#productnote').val(data.data.productnote);   
                         
                     }
                 });
