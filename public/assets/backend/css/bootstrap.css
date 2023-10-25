@@ -5806,6 +5806,14 @@ button.list-group-item-danger.active:focus {
   padding: 9px;
   border-radius: 2px;
 }
+.border-green
+{
+	border-left: 5px solid #009688;
+}
+.green-text
+{
+  color: #090 !important;
+}
 .close {
   float: right;
   font-size: 18px;

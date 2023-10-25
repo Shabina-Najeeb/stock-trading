@@ -399,7 +399,7 @@
 
 <hr />
 
-<ol class="breadcrumb bc-3" >
+<!-- <ol class="breadcrumb bc-3" >
 								<li>
 						<a href="index.html"><i class="fa-home"></i>Home</a>
 					</li>
@@ -411,14 +411,14 @@
 		
 									<strong>Data Validation</strong>
 							</li>
-							</ol>
+							</ol> -->
 					
-		<h2>Form Validation</h2>
+		<h2>Risk Control Management</h2>
 		<br />
 		
 		<div class="panel panel-primary">
 		
-			<div class="panel-heading">
+			<!-- <div class="panel-heading">
 				<div class="panel-title">All fields have validation rules <small><code>data-validate="rule1,rule2,...,ruleN"</code></small></div>
 		
 				<div class="panel-options">
@@ -427,57 +427,83 @@
 					<a href="#" data-rel="reload"><i class="entypo-arrows-ccw"></i></a>
 					<a href="#" data-rel="close"><i class="entypo-cancel"></i></a>
 				</div>
-			</div>
+			</div> -->
 		
 			<div class="panel-body">
 		
 				<form role="form" id="form1" method="post" class="validate">
-		
+                <div class="well well-sm border-green">
+			<h4>Note: For example, set a certain time to a certain time, such as: 14:20-15:30</h4>
+		</div>
 					<div class="form-group">
-						<label class="control-label">Required Field + Custom Message</label>
+						<label class="control-label green-text">Guaranteed winning time period</label>
 		
-						<input type="text" class="form-control" name="name" data-validate="required" data-message-required="This is custom message for required field." placeholder="Required Field" />
+						<input type="text" class="form-control" name="guaranteed-time" id="guaranteed-time" data-validate="required" data-message-required="This is custom message for required field." placeholder="Please fill in the guaranteed winning time period" />
+					</div>
+		
+                    <div class="well well-sm border-green">
+			<h4>Note: For example, set a certain time to a certain time, such as: 18:10-18:30</h4>
+		</div>
+					<div class="form-group">
+						<label class="control-label green-text">Steady loss time period</label>
+						<input type="text" class="form-control" name="steady-time" id="steady-time" data-validate="email" placeholder="Please fill in the stable loss time period" />
 					</div>
 		
 					<div class="form-group">
-						<label class="control-label">Email Field</label>
-		
-						<input type="text" class="form-control" name="email" data-validate="email" placeholder="Email Field" />
+						<label class="control-label green-text">Total win ratio</label>
+						<input type="text" class="form-control" name="win-ratio" id="win-ratio" data-validate="number,minlength[4]" placeholder="Please fill in the full win ratio" />
+                        %
 					</div>
 		
 					<div class="form-group">
-						<label class="control-label">Input Min Field</label>
+						<label class="control-label green-text">Total loss ratio</label>
 		
-						<input type="text" class="form-control" name="min_field" data-validate="number,minlength[4]" placeholder="Numeric + Minimun Length Field" />
+						<input type="text" class="form-control"  name="loss-ratio" id="loss-ratio" data-validate="maxlength[2]" placeholder="Please fill in the total loss ratio" />
+                        %
+					</div>
+		
+                    <div class="well well-sm border-green">
+			<h4>Note: Set the member ID here (such as: 8888). Multiple users are separated by | symbols (such as: 8888|9999). After setting, all orders of this member will be in losses. Please operate with caution. If you want to stop this function, please leave it blank or fill in 0 and submit.</h4>
+		</div>
+					<div class="form-group">
+						<label class="control-label green-text">Designated client losses</label>
+		
+						<input type="text" class="form-control" name="designated-client-losses" id="designated-client-losses" data-validate="number" placeholder="Please fill in the customer ID" />
+					</div>
+
+                    <div class="well well-sm border-green">
+			<h4>Note: Set the member ID here (such as: 8888). Multiple users are separated by | symbols (such as: 8888|9999). After setting, all orders of this member will be profitable. Please operate with caution. If you want to stop this function, please leave it blank or fill in 0 and submit.</h4>
+		</div>
+		
+					<div class="form-group">
+						<label class="control-label green-text">Specify customer profit </label>
+		
+						<input type="text" class="form-control" name="customer-profit" id="customer-profit" data-validate="required,url" placeholder="Please fill in the customer ID" />
+					</div>
+		 
+                    <div class="well well-sm border-green">
+			<h4>Note: Orders reaching this amount will be affected by the following risk controls.</h4>
+		</div>
+					<div class="form-group">
+						<label class="control-label green-text">Minimum risk control value</label>
+		
+						<input type="text" class="form-control" name="risk-control" id="risk-control" data-validate="required,creditcard" placeholder="Please enter the minimum risk control value" />
+					</div>
+                    <div class="well well-sm border-green">
+			<h4>Instructions: Enter the amount range. Within the amount range, profits and losses will be made based on this probability. If it is not within this range, it will not be affected by risk control.
+            Format: Interval start - Interval end: customer profit probability| Symbols must be English symbols, such as 0-100:50|100-200:30  
+            </h4>
+		</div>
+                    
+					<div class="form-group">
+						<label class="control-label green-text">Risk control probability</label>
+		
+						<input type="text" class="form-control" name="risk-probability" id="risk-probability" data-validate="required,creditcard" placeholder="Please enter risk control probability" />
 					</div>
 		
 					<div class="form-group">
-						<label class="control-label">Input Max Field</label>
-		
-						<input type="text" class="form-control" name="max_field" data-validate="maxlength[2]" placeholder="Maximum Length Field" />
-					</div>
-		
-					<div class="form-group">
-						<label class="control-label">Numeric Field</label>
-		
-						<input type="text" class="form-control" name="number" data-validate="number" placeholder="Numeric Field" />
-					</div>
-		
-					<div class="form-group">
-						<label class="control-label">URL Field</label>
-		
-						<input type="text" class="form-control" name="url" data-validate="required,url" placeholder="URL" />
-					</div>
-		
-					<div class="form-group">
-						<label class="control-label">Credit Card Field</label>
-		
-						<input type="text" class="form-control" name="creditcard" data-validate="required,creditcard" placeholder="Credit Card" />
-					</div>
-		
-					<div class="form-group">
-						<button type="submit" class="btn btn-success">Validate</button>
-						<button type="reset" class="btn">Reset</button>
+						<button type="submit" class="btn btn-success">Save Settings</button>
+						<!-- <button type="reset" class="btn">Reset</button> -->
 					</div>
 		
 				</form>
@@ -491,7 +517,7 @@
 
 
 
-<h3>Table without DataTable Header</h3>
+<!-- <h3>Table without DataTable Header</h3>
 
 
 
@@ -518,7 +544,7 @@
 
 
 </tbody>
-</table>
+</table> -->
 
 
 <script src="{{asset('assets/backend/dist/js/pages/user.js')}}"></script>
