@@ -2,7 +2,7 @@
 namespace App\Http\Controllers\Modules\Admin;
 use App\Http\Controllers\Controller;
 
-
+use Response;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
