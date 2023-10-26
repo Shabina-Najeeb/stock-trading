@@ -81,7 +81,7 @@
 
 
 
-
+<!-- 
                 <li class="has-sub">
 					<a href="/admin/order">
 						<i class="entypo-gauge"></i>
@@ -102,8 +102,26 @@
 					
 					</ul>
                    	
-				</li>
+				</li> -->
 				
+                <li class="active opened active has-sub">
+					<a href="#">
+						<i class="entypo-gauge"></i>
+						<span class="title">Order Management</span>
+					</a>
+					<ul class="visible">
+						<li class="active">
+							<a href="/admin/order">
+								<span class="title">Transaction Flow</span>
+							</a>
+						</li>
+						<li>
+							<a href="/admin/order_log">
+								<span class="title">Closing log</span>
+							</a>
+						</li>
+					</ul>
+				</li>
                 
 				
 				

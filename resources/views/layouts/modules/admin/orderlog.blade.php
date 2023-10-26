@@ -129,7 +129,7 @@
 
 
 
-<h3>Position List</h3>
+<h3>Closing Log List</h3>
 
 <script type="text/javascript">
 jQuery( window ).load( function() {
@@ -186,21 +186,15 @@ giCount++;
             <input type="checkbox" id="chk-1">
         </div>
     </th> -->
-    <th>order Number</th>
-    <th>Members</th>
+    <th>Serial Number</th>
+    <th>Member ID</th>
     <th>User Name</th>
-    <th>Order Time</th>
-    <th>Product Information</th>
-    <th>State</th>
-    <th>Direction time/points Opening point</th>
-    <th>Closing point</th>
-    <th>Commision Balance</th>
-    <th>Invalid Order Balance</th>
-    <th>Actual Profit</th>
-    <th>Loss balance after purchase</th>
-    <th>Single Control</th>
-    <th>Operation</th>
-</tr>
+    <th>Order ID</th>
+    <th>Increase Amount</th>
+    <th>Increase Points</th>
+    <th>Balance after closing position</th>
+    <th>Time</th>
+
 </thead>
 
 <tbody id="productTbody">

@@ -38,6 +38,7 @@ Route::get('/admin/userTable',[App\Http\Controllers\Modules\Admin\UserController
 
 Route::get('/admin/risk',[App\Http\Controllers\Modules\Admin\RiskController::class, 'index'])->name('adminRiskControl');
 Route::get('/admin/order',[App\Http\Controllers\Modules\Admin\OrdersController::class, 'index'])->name('adminOrders');
+Route::get('/admin/order_log',[App\Http\Controllers\Modules\Admin\OrdersController::class, 'orderLog'])->name('adminOrdersLog');
 Route::post('/admin/addRisk',[App\Http\Controllers\Modules\Admin\RiskController::class,'addRisk'])->name('adminaddRiskcontrol');
 Route::get('/admin/editRisk/{id}',[App\Http\Controllers\Modules\Admin\RiskController::class,'editRisk']);
 Route::get('/admin/deleteRisk/{id}',[App\Http\Controllers\Modules\Admin\RiskController::class,'deleteRisk']);

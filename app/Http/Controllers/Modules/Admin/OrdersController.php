@@ -13,4 +13,9 @@ class OrdersController extends Controller
     {
         return view("layouts.modules.admin.order");
     }
+
+    public function orderLog()
+    {
+        return view("layouts.modules.admin.orderlog");
+    }
 }
