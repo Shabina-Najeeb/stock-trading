@@ -73,7 +73,7 @@ $(document).ready(function(){
                             data+='<td>'+userList[0][i].name+'</td>';
                             data+='<td>'+userList[0][i].useraccount+'</td>';
                             data+='<td>'+'<div class="option-box"><class="option-list"><button type="button" data-text="View recored" id="'+userList[0][i].id+'" class="user-edit-class">';
-                            data+='<span class="fas fa-edit nav-icon""></span></button></div>'+'</td></tr>';
+                            data+='<span class="btn btn-blue"></span></button></div>'+'</td></tr>';
                         }
                              $('#userTbody,#userTable').html(data);
                       }
@@ -103,19 +103,19 @@ $(document).ready(function(){
                     success:function(data)
                     {
                         $('#form_result').html('');
-                        $('#user_form')[0].reset();
+                         $('#user_form')[0].reset();
                         $('#addUserButton,#newUserButton').hide();
                         //form display
-                        productId=data.product_FormData.id;
-                        $('#userHiddenId').val(productId);
-                        $('#useraccount').val(data.user_FormData.useraccount);
-                        $('#name').val(data.user_FormData.name);
-                        $('#userid').val(data.user_FormData.userid);
-                        $('#login_pword').val(data.user_FormData.login_pword);
-                        $('#transaction_pword').val(data.user_FormData.transaction_pword);
-                        $('#balance').val(data.user_FormData.balance);
+                       userId=data.data.id;
+                        $('#userHiddenId').val(userId);
+                        $('#useraccount').val(data.data.useraccount);
+                        $('#name').val(data.data.name);
+                        $('#userid').val(data.data.userid);
+                        $('#login_pword').val(data.data.login_pword);
+                        $('#transaction_pword').val(data.data.transaction_pword);
+                        $('#balance').val(data.data.balance);
                        
-                        $('#member').val(data.user_FormData.member);
+                        $('#member').val(data.data.member);
                         
                     }
                 });
@@ -123,7 +123,7 @@ $(document).ready(function(){
             });
             
             
-            $('#deleteusertButton').click(function(e){
+            $('#deleteUserButton').click(function(e){
             
                 if(!confirm("Do you really want to do this?")) {
                     return false;

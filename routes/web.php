@@ -31,11 +31,19 @@ Route::get('/admin/productlist',[App\Http\Controllers\Modules\Admin\ProductlistC
 
 Route::get('/admin/user',[App\Http\Controllers\Modules\Admin\UserController::class, 'index'])->name('adminUser');
 Route::post('/admin/adduser',[App\Http\Controllers\Modules\Admin\UserController::class,'addUser'])->name('adminUseradd');
-Route::get('/admin/edituser/{id}',[App\Http\Controllers\Modules\Admin\UserController::class,'editUser']);
-Route::get('/admin/deleteuser/{id}',[App\Http\Controllers\Modules\Admin\UserController::class,'deleteUser']);
+Route::get('/admin/editUser/{id}',[App\Http\Controllers\Modules\Admin\UserController::class,'editUser']);
+Route::get('/admin/deleteUser/{id}',[App\Http\Controllers\Modules\Admin\UserController::class,'deleteUser']);
 Route::get('/admin/userTable',[App\Http\Controllers\Modules\Admin\UserController::class,'userTable'])->name('adminUsertable');
 
-
-
 Route::get('/admin/risk',[App\Http\Controllers\Modules\Admin\RiskController::class, 'index'])->name('adminRiskControl');
+Route::post('/admin/addRisk',[App\Http\Controllers\Modules\Admin\RiskController::class,'addRisk'])->name('adminaddRiskcontrol');
+Route::get('/admin/editRisk/{id}',[App\Http\Controllers\Modules\Admin\RiskController::class,'editRisk']);
+Route::get('/admin/deleteRisk/{id}',[App\Http\Controllers\Modules\Admin\RiskController::class,'deleteRisk']);
+Route::get('/admin/riskTable',[App\Http\Controllers\Modules\Admin\RiskController::class,'riskTable'])->name('adminRiskcontroltable');
+
+
+
+
+
+
 

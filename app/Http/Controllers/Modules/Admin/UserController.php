@@ -3,7 +3,7 @@ namespace App\Http\Controllers\Modules\Admin;
 use App\Http\Controllers\Controller;
 Use App\Models\Userdetails;
 use DB;
-
+use Response;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
@@ -51,8 +51,8 @@ class UserController extends Controller
            
    
         
-            $data = $user->save();
-            $data = Userdetails::find($user->id);
+            $data = $userdetails->save();
+            $data = Userdetails::find($userdetails->id);
            
 
                
@@ -104,7 +104,7 @@ class UserController extends Controller
      {
 
       
-         $user = Userdetails::all();
+         $userdetails = Userdetails::all();
  
          return response()->json([
              'userdetails' => $userdetails,
