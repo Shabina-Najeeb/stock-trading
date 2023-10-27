@@ -25,7 +25,7 @@ class ProductlistController extends Controller
     public function productTable()
     {
 
-            // dd(hi);
+            //// dd(hi);
         $product = Product::all();
 
         return response()->json([

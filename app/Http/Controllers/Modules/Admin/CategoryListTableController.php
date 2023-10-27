@@ -28,10 +28,11 @@ class CategoryListTableController extends Controller
             //dd(hi);
         $category = Category::all();
 
-        return response()->json([
-            'category' => $category,
-        ]);
-        //return view("layouts.modules.admin.article_categorylist");
+        // return response()->json([
+        //     'category' => $category,
+        // ]);
+         //dd($category);
+        return view("layouts.modules.admin.article_newcategorylist",['data' => $category]);
     }
  
    
