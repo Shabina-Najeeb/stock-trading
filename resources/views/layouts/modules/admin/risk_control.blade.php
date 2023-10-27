@@ -251,7 +251,7 @@
 
 
 
-<h3>Table without DataTable Header</h3>
+<!-- <h3>Table without DataTable Header</h3>
 
 
 
@@ -278,7 +278,7 @@
 
 
 </tbody>
-</table>
+</table> -->
 
 
 <script src="{{asset('assets/backend/dist/js/pages/risk.js')}}"></script>
