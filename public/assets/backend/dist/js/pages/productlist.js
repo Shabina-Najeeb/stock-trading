@@ -1,6 +1,4 @@
 $(document).ready(function(){
-  alert('hi');
-
         productTable();
         function productTable(){
             $.ajax({

@@ -54,7 +54,7 @@
 						
 			<ul class="navbar-nav">
             <li class="has-sub">
-					<a href="index.html">
+					<a href="/backend">
 						<i class="entypo-gauge"></i>
 						<span class="title">Dashboard</span>
 					</a>
