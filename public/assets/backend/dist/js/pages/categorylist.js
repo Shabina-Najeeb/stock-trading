@@ -15,6 +15,7 @@ $(document).ready(function(){
                 success:function(data){
                 
                         var categoryList=Object.values(data);
+                        data += '<tr><th>Order</th><th>Category Name</th><th>Add time</th></tr>';
                         var data='';
                         for(var i=0;i<(categoryList[0].length);i++){
                             data+='<tr><td>'+categoryList[0][i].order+'</td>';

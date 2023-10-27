@@ -135,7 +135,10 @@
 
 	</div>
 
-	<div class="main-content">
+	
+    
+    
+    <div class="main-content">
 				
 		
 
@@ -181,7 +184,7 @@
               @csrf
 
                 <div class="form-group">
-                    <label for="field-1" class="col-sm-3 control-label">Product Name</label>
+                    <label for="field-1" class="col-sm-3 control-label green-text">Product Name</label>
                     
                     <div class="col-sm-5">
                         <input type="text" class="form-control" name="productname" id="productname" placeholder="please enter product name">
@@ -189,7 +192,7 @@
                 </div>
                 
                 <div class="form-group">
-                    <label for="field-2" class="col-sm-3 control-label">Product Code</label>
+                    <label for="field-2" class="col-sm-3 control-label green-text">Product Code</label>
                     
                     <div class="col-sm-5">
                         <input type="text" class="form-control" name= "productcode"id="productcode" placeholder="please enter product code">
@@ -197,7 +200,7 @@
                 </div>
                 <div class="form-group">
                 <div class="col-md-6">
-                    <label for="field-1" class="col-sm-3 control-label">Home Page Recomentation</label>
+                    <label for="field-1" class="col-sm-3 control-label green-text">Home Page Recomentation</label>
 								<!-- <label class="col-sm-6 control-label">Home Page Recomentation</label> -->
                                 <div class="col-sm-5">
 								
@@ -210,7 +213,7 @@
 							</div>
                 </div>
                  <div class="col-md-6">
-                    <label for="field-1" class="col-sm-3 control-label">Product Icon</label>
+                    <label for="field-1" class="col-sm-3 control-label green-text">Product Icon</label>
                     
                     <div class="col-sm-5">
                         <input type="file" class="form-control"  name= "producticon"id="producticon" placeholder="please add product Icon">
@@ -219,14 +222,14 @@
             </div>
                 <div class="form-group">
                 <div class="col-md-6">
-                    <label for="field-12" class="col-sm-3 control-label">Minimum risk control fluctuation</label>
+                    <label for="field-12" class="col-sm-3 control-label green-text">Minimum risk control fluctuation</label>
                     
                   
                         <input type="text" class="form-control" name="minimumrisk"id="minimumrisk" placeholder="please enter details of minimum risk control fluctuation">
               
                 </div>
                 <div class="col-md-6">
-                    <label for="field-12" class="col-sm-3 control-label">Maximum risk control fluctuation</label>
+                    <label for="field-12" class="col-sm-3 control-label green-text">Maximum risk control fluctuation</label>
                     
                     
                         <input type="text" class="form-control" name="maximumrisk"  id="maximumrisk" placeholder="please enter details of maximun risk control fluctuation">
@@ -237,7 +240,7 @@
            
                 
                 <div class="form-group">
-                    <label for="field-3" class="col-sm-3 control-label">Random fluctuation range</label>
+                    <label for="field-3" class="col-sm-3 control-label green-text">Random fluctuation range</label>
                     
                     <div class="col-sm-5">
                         <input type="text" class="form-control" name ="randomrange" id="randomrange" placeholder="please enter details of random fluctuation range">
@@ -250,13 +253,13 @@
                 <div class="form-group">
                     
                     <div class="col-md-3">
-                    <label for="field-3" class="col-sm-6 control-label">Time play interval【1】</label>
+                    <label for="field-3" class="col-sm-6 control-label green-text">Time play interval【1】</label>
                     <input type="text" class="form-control" name = "time1" id="time1" placeholder="please enter details of time play interval">
 
 							</div>
                           
                     <div class="col-md-3">
-                    <label for="field-3" class="col-sm-6 control-label">Time play interval【2】</label>
+                    <label for="field-3" class="col-sm-6 control-label green-text">Time play interval【2】</label>
 
                     <input type="text" class="form-control" name = "time2" id="time2" placeholder="please enter details of time play interval">
                                 
@@ -264,13 +267,13 @@
                            
                     
                     <div class="col-md-3">
-                    <label for="field-3" class="col-sm-6 control-label">Time play interval【3】</label>
+                    <label for="field-3" class="col-sm-6 control-label green-text">Time play interval【3】</label>
                     <input type="text" class="form-control" name = "time3" id="time3" placeholder="please enter details of time play interval">
 							</div>
                            
                     
                     <div class="col-md-3">
-                    <label for="field-3" class="col-sm-6 control-label">Time play interval【4】</label>
+                    <label for="field-3" class="col-sm-6 control-label green-text">Time play interval【4】</label>
                     <input type="text" class="form-control" name = "time4" id="time4" placeholder="please enter details of time play interval">
                                 
 					</div>
@@ -282,7 +285,7 @@
                 <div class="form-group">
                 <div class="col-md-3">
                     
-                    <label for="field-3" class="col-sm-6 control-label">Profit and loss ratio [1]</label>
+                    <label for="field-3" class="col-sm-6 control-label green-text">Profit and loss ratio [1]</label>
                     
                   
                         <input type="text" class="form-control" name ="profit1"  id="profit1" placeholder="please enter details of profit and loss ratio">
@@ -291,7 +294,7 @@
 
          
                 <div class="col-md-3">
-                    <label for="field-3" class="col-sm-6 control-label">Profit and loss ratio [2]</label>
+                    <label for="field-3" class="col-sm-6 control-label green-text">Profit and loss ratio [2]</label>
                     
                    
                         <input type="text" class="form-control" name ="profit2"  id="profit2" placeholder="please enter details of profit and loss ratio">
@@ -299,7 +302,7 @@
                 </div>
                 <div class="col-md-3">
                     
-                    <label for="field-3" class="col-sm-6 control-label">Profit and loss ratio [3]</label>
+                    <label for="field-3" class="col-sm-6 control-label green-text">Profit and loss ratio [3]</label>
                     
                    
                         <input type="text" class="form-control" name ="profit3"  id="profit3" placeholder="please enter details of profit and loss ratio">
@@ -307,7 +310,7 @@
                 </div>
                 <div class="col-md-3">
                     
-                    <label for="field-3" class="col-sm-6 control-label">Profit and loss ratio [4]</label>
+                    <label for="field-3" class="col-sm-6 control-label green-text">Profit and loss ratio [4]</label>
                     
                   
                         <input type="text" class="form-control" name ="profit4"  id="profit4" placeholder="please enter details of profit and loss ratio">
@@ -317,7 +320,7 @@
                 <div class="form-group">
                 <div class="col-md-3">
                     
-                    <label for="field-3" class="col-sm-6 control-label">Loss ratio [1]</label>
+                    <label for="field-3" class="col-sm-6 control-label green-text">Loss ratio [1]</label>
                     
                    
                         <input type="text" class="form-control" name ="loss1"  id="loss1" placeholder="please enter details of loss ratio">
@@ -326,7 +329,7 @@
                 
                 <div class="col-md-3">
                     
-                    <label for="field-3" class="col-sm-6 control-label">Loss ratio [2]</label>
+                    <label for="field-3" class="col-sm-6 control-label green-text">Loss ratio [2]</label>
                     
                    
                         <input type="text" class="form-control" name ="loss2"  id="loss2" placeholder="please enter details of loss ratio">
@@ -334,7 +337,7 @@
                 </div>
                 <div class="col-md-3">
                     
-                    <label for="field-3" class="col-sm-6 control-label">Loss ratio [3]</label>
+                    <label for="field-3" class="col-sm-6 control-label green-text">Loss ratio [3]</label>
                     
                 
                         <input type="text" class="form-control" name ="loss3"  id="loss3" placeholder="please enter details of loss ratio">
@@ -342,7 +345,7 @@
                 </div>
                 <div class="col-md-3">
                     
-                    <label for="field-3" class="col-sm-6 control-label">Loss ratio [4]</label>
+                    <label for="field-3" class="col-sm-6 control-label green-text">Loss ratio [4]</label>
                     
              
                         <input type="text" class="form-control" name ="loss4"  id="loss4" placeholder="please enter details of loss ratio">
@@ -353,7 +356,7 @@
                 
                 <div class="form-group">
                 <div class="col-md-6">
-                    <label for="field-ta" class="col-sm-6 control-label">Earnings floating ratio range</label>
+                    <label for="field-ta" class="col-sm-6 control-label green-text">Earnings floating ratio range</label>
                     
                   
                     <input type="text" class="form-control" name ="earningratio"  id="earningratio" placeholder="please enter details of Earning ratio">
@@ -361,7 +364,7 @@
                 </div>
                 
                 <div class="col-md-6">
-                    <label for="field-ta" class="col-sm-6 control-label"> Floating ratio range under loss</label>
+                    <label for="field-ta" class="col-sm-6 control-label green-text"> Floating ratio range under loss</label>
                     
                
                     <input type="text" class="form-control" name ="floatingratio"  id="floatingratio" placeholder="please enter details of Floating ratio">
@@ -370,27 +373,27 @@
                 <div class="form-group">
                 <div class="col-md-3">
                     
-                    <label for="field-ta" class="col-sm-12 control-label"> Market Opening time Monday</label>
+                    <label for="field-ta" class="col-sm-12 control-label green-text"> Market Opening time Monday</label>
                     
                     <input type="text" class="form-control" name ="monday"  id="monday" placeholder="please enter details of monday">
                     
                 </div>
                 <div class="col-md-3">
-                    <label for="field-ta" class="col-sm-12 control-label"> Market Opening time Tuesday</label>
+                    <label for="field-ta" class="col-sm-12 control-label green-text"> Market Opening time Tuesday</label>
                     
                     
                     <input type="text" class="form-control" name ="tuesday"  id="tuesday" placeholder="please enter details of tuesday">
                    
                 </div>
                 <div class="col-md-3">
-                    <label for="field-ta" class="col-sm-12 control-label"> Market Opening time Wednesday</label>
+                    <label for="field-ta" class="col-sm-12 control-label green-text"> Market Opening time Wednesday</label>
                     
                  
                     <input type="text" class="form-control" name ="wednesday"  id="wednesday" placeholder="please enter details of wednesday">
                   
                 </div>
                 <div class="col-md-3">
-                    <label for="field-ta" class="col-sm-12 control-label"> Market Opening time Thursday</label>
+                    <label for="field-ta" class="col-sm-12 control-label green-text"> Market Opening time Thursday</label>
                     
                  
                     <input type="text" class="form-control" name ="thursday"  id="thursday" placeholder="please enter details of thursday">
@@ -398,21 +401,21 @@
                 </div>
                 <div class="form-group">
                 <div class="col-md-3">
-                    <label for="field-ta" class="col-sm-12 control-label"> Market Opening time Friday</label>
+                    <label for="field-ta" class="col-sm-12 control-label green-text"> Market Opening time Friday</label>
                     
                 
                     <input type="text" class="form-control" name ="friday"  id="friday" placeholder="please enter details of friday">
                   
                 </div>
                 <div class="col-md-3">
-                    <label for="field-ta" class="col-sm-12 control-label"> Market Opening time Satarday</label>
+                    <label for="field-ta" class="col-sm-12 control-label green-text"> Market Opening time Satarday</label>
                     
                    
                     <input type="text" class="form-control" name ="satarday"  id="satarday" placeholder="please enter details of satarday">
                    
                 </div>
                 <div class="col-md-3">
-                    <label for="field-ta" class="col-sm-12 control-label"> Market Opening time Sunday</label>
+                    <label for="field-ta" class="col-sm-12 control-label green-text"> Market Opening time Sunday</label>
                     
                    
                     <input type="text" class="form-control" name ="sunday"  id="sunday" placeholder="please enter details of sunday">
@@ -421,7 +424,7 @@
                 
 
                 <div class="form-group">
-								<label for="field-ta" class="col-sm-3 control-label">Product note</label>
+								<label for="field-ta" class="col-sm-3 control-label green-text">Product note</label>
 								
 								<div class="col-sm-5">
 									<textarea class="form-control" name ="productnote"  id="productnote" placeholder="Textarea"></textarea>

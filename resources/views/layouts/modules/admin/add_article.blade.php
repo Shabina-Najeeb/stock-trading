@@ -151,7 +151,7 @@
                 </div>
                       
         
-<h2>Add User</h2>
+<h2>Add Article</h2>
 <br />
 
 
@@ -162,7 +162,7 @@
     
         <div class="panel-heading">
             <div class="panel-title">
-              Input User Details 
+              Input Article 
             </div>
             
             <div class="panel-options">
@@ -181,7 +181,7 @@
 
                 <div class="form-group">
                 <div class="col-md-3">
-                    <label for="field-1" class="col-sm-6 control-label">User Account</label>
+                    <label for="field-1" class="col-sm-6 control-label">Article classification</label>
                     
                    
                         <input type="text" class="form-control" name="useraccount" id="useraccount" placeholder="please enter user accound">
@@ -189,7 +189,7 @@
                 </div>
                 
                 <div class="col-md-3">
-                    <label for="field-2" class="col-sm-6 control-label">Name</label>
+                    <label for="field-2" class="col-sm-6 control-label">Article name</label>
                     
                    
                         <input type="text" class="form-control" name= "name"id="name" placeholder="please enter your name">
@@ -197,15 +197,20 @@
                 </div>
 
                 <div class="col-md-3">
-                    <label for="field-2" class="col-sm-6 control-label">User ID</label>
-                    
+                    <label for="field-2" class="col-sm-6 control-label">Whether to display</label>
+                    <select class="form-control" id ="member" name="member">
+										<option>Ordinary</option>
+										<option>VIP 8</option>
+										
+									</select>
+							
                    
-                        <input type="text" class="form-control" name= "userid"id="userid" placeholder="please enter your name">
+                      
                     
                 </div>
                 <div class="col-md-3">
                     
-                    <label for="field-2" class="col-sm-12 control-label">Login Password</label>
+                    <label for="field-2" class="col-sm-12 control-label">key word</label>
                 
                         <input type="password" class="form-control"  name= "login_pword" id="login_pword" placeholder="please enter login password">
                     
@@ -214,24 +219,8 @@
 
 
 
-                <div class="form-group">
-                <div class="col-md-3">
-                    <label for="field-1" class="col-sm-12 control-label">Transaction Password</label>
-                    
-                  
-                        <input type="password" class="form-control"  name= "transaction_pword"id="transaction_pword" placeholder="please enter transaction password">
-                
-                </div>
-                <div class="col-md-3">
-           
-                    <label for="field-3" class="col-sm-6 control-label">Balance</label>
-                    
-                  
-                        <input type="text" class="form-control" name="balance"id="balance" placeholder="please enter your balance">
-              
-                </div>
-                <div class="col-md-3">
-								<label class="col-sm-6 control-label">Member</label>
+               
+								
 								
 								
 									<select class="form-control" id ="member" name="member">
@@ -240,7 +229,7 @@
 										
 									</select>
 							
-							</div>
+						
 							
 
 </div>

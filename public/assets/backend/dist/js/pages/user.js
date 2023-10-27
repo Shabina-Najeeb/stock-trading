@@ -68,6 +68,8 @@ $(document).ready(function(){
                 
                         var userList=Object.values(data);
                         var data='';
+
+                        data += '<tr><th>ID</th><th>Name</th><th>User Account</th><th>Action</th></tr>';
                         for(var i=0;i<(userList[0].length);i++){
                             data+='<tr><td>'+(i+1)+'</td>';
                             data+='<td>'+userList[0][i].name+'</td>';

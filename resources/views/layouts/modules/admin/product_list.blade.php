@@ -180,17 +180,18 @@ replaceCheckboxes(); // because there is checkbox, replace it
 giCount++;
 }
 </script>
-
-<a href="/admin/product">
+                            <a href="/admin/product">
+                                
+                            <button   type="submitt"value="AddProduct"   name="addproduct" Category class="btn btn-default">Delete Product</button>
+                            </a>
+                            <a href="/admin/product">
 
 
 							<button   type="submitt"value="DeleteProduct"   name="deleteproduct" Category class="btn btn-default">Add Product</button>
                           
 							</a>
 
-                            <a href="/admin/product">
-                            <button   type="submitt"value="AddProduct"   name="addproduct" Category class="btn btn-default">Delete Product</button>
-                            </a>
+                            
 </br>
 </br>
 </br>
