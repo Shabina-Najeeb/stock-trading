@@ -63,7 +63,7 @@
 				</li>
 
                 <li class="has-sub">
-					<a href="/admin/productlist">
+					<a href="/admin/product">
 						<i class="entypo-doc-text"></i>
 						<span class="title">Product Management</span>
 					</a>
@@ -82,26 +82,23 @@
 
 
 
-                <li class="has-sub">
+                <li class="active opened active has-sub">
 					<a href="#">
 						<i class="entypo-gauge"></i>
 						<span class="title">Order Management</span>
 					</a>
-                    <ul>
-					<li>
-							<a href="#">
+					<ul class="visible">
+						<li class="active">
+							<a href="/admin/order">
 								<span class="title">Transaction Flow</span>
 							</a>
 						</li>
-                        <li>
-							<a href="#">
-								<span class="title">Closing Log</span>
+						<li>
+							<a href="/admin/order_log">
+								<span class="title">Closing log</span>
 							</a>
 						</li>
-						
-					
 					</ul>
-                   	
 				</li>
 				
                 
@@ -132,72 +129,22 @@
 
 
 
-<h3>Product List</h3>
-
-<script type="text/javascript">
-jQuery( window ).load( function() {
-var $table2 = jQuery( "#table-2" );
-
-// Initialize DataTable
-$table2.DataTable( {
-"sDom": "tip",
-"bStateSave": false,
-"iDisplayLength": 8,
-"aoColumns": [
-    { "bSortable": false },
-    null,
-    null,
-    null,
-    null
-],
-"bStateSave": true
-});
-
-// Highlighted rows
-$table2.find( "tbody input[type=checkbox]" ).each(function(i, el) {
-var $this = $(el),
-    $p = $this.closest('tr');
-
-$( el ).on( 'change', function() {
-    var is_checked = $this.is(':checked');
-    
-    $p[is_checked ? 'addClass' : 'removeClass']( 'highlight' );
-} );
-} );
-
-// Replace Checboxes
-$table2.find( ".pagination a" ).click( function( ev ) {
-replaceCheckboxes();
-} );
-} );
-
-// Sample Function to add new row
-var giCount = 1;
-
-function fnClickAddRow() {
-jQuery('#table-2').dataTable().fnAddData( [ '<div class="checkbox checkbox-replace"><input type="checkbox" /></div>', giCount + ".1", giCount + ".2", giCount + ".3", giCount + ".4" ] );
-replaceCheckboxes(); // because there is checkbox, replace it
-giCount++;
-}
-</script>
-
-<a href="/admin/product">
+<h3>Category List</h3>
 
 
-							<button   type="submitt"value="DeleteProduct"   name="deleteproduct" Category class="btn btn-default">Add Product</button>
-                          
+
+<li>
+							<a href="/admin/category">
+							<button   type="submitt"value="AddArticle"   name="addcategory" Category class="btn btn-default">Add Article</button>
 							</a>
+						</li>
 
-                            <a href="/admin/product">
-                            <button   type="submitt"value="AddProduct"   name="addproduct" Category class="btn btn-default">Delete Product</button>
-                            </a>
 </br>
 </br>
 </br>
 
 
-
-<table class="table table-bordered table-striped datatable" id="productlistTable">
+<table class="table table-bordered table-striped datatable" id="categorylistTable">
 <thead>
 <tr>
     <!-- <th>
@@ -206,18 +153,14 @@ giCount++;
         </div>
     </th> -->
     <th>Refresh</th>
-    <th>Product title</th>
-    <th>product code</th>
-    <th>Homepage Recomentation</th>
-    <th>State</th>
-    <th>Random value</th>
-    <th>Minimum Risk Control</th>
-    <th>Maximum Risk Control</th>
-    <th>Operate</th>
+    <th>Category name</th>
+	<th>Order</th>
+    <th>Add time</th>
+   
 </tr>
 </thead>
 
-<tbody id="productlistTbody">
+<tbody id="categorylistTbody">
 
 
 
@@ -290,6 +233,7 @@ Add Row
 <br />
 <br />
 
-<script src="{{asset('assets/backend/dist/js/pages/productlist.js')}}"></script>
+
+<script src="{{asset('assets/backend/dist/js/pages/categorylist.js')}}"></script>
 
 @endsection

@@ -7,6 +7,8 @@ use App\Http\Controllers\Modules\Admin\ProductlistController;
 use App\Http\Controllers\Modules\Admin\UserController;
 use App\Http\Controllers\Modules\Admin\RiskController;
 use App\Http\Controllers\Modules\Admin\OrdersController;
+use App\Http\Controllers\Modules\Admin\CategoryController;
+use App\Http\Controllers\Modules\Admin\CategoryLIstTableController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -37,13 +39,30 @@ Route::get('/admin/deleteUser/{id}',[App\Http\Controllers\Modules\Admin\UserCont
 Route::get('/admin/userTable',[App\Http\Controllers\Modules\Admin\UserController::class,'userTable'])->name('adminUsertable');
 
 Route::get('/admin/risk',[App\Http\Controllers\Modules\Admin\RiskController::class, 'index'])->name('adminRiskControl');
-Route::get('/admin/order',[App\Http\Controllers\Modules\Admin\OrdersController::class, 'index'])->name('adminOrders');
-Route::get('/admin/order_log',[App\Http\Controllers\Modules\Admin\OrdersController::class, 'orderLog'])->name('adminOrdersLog');
 Route::post('/admin/addRisk',[App\Http\Controllers\Modules\Admin\RiskController::class,'addRisk'])->name('adminaddRiskcontrol');
 Route::get('/admin/editRisk/{id}',[App\Http\Controllers\Modules\Admin\RiskController::class,'editRisk']);
 Route::get('/admin/deleteRisk/{id}',[App\Http\Controllers\Modules\Admin\RiskController::class,'deleteRisk']);
 Route::get('/admin/riskTable',[App\Http\Controllers\Modules\Admin\RiskController::class,'riskTable'])->name('adminRiskcontroltable');
 
+
+Route::get('/admin/order',[App\Http\Controllers\Modules\Admin\OrdersController::class, 'index'])->name('adminOrders');
+Route::get('/admin/order_log',[App\Http\Controllers\Modules\Admin\OrdersController::class, 'orderLog'])->name('adminOrdersLog');
+
+Route::get('/admin/category',[App\Http\Controllers\Modules\Admin\CategoryController::class, 'index'])->name('adminCategory');
+Route::post('/admin/addCategory',[App\Http\Controllers\Modules\Admin\CategoryController::class,'addCategory'])->name('adminCategoryadd');
+Route::get('/admin/editCategory/{id}',[App\Http\Controllers\Modules\Admin\CategoryController::class,'editCategory']);
+Route::get('/admin/deleteCategory/{id}',[App\Http\Controllers\Modules\Admin\CategoryController::class,'deleteCategory']);
+Route::get('/admin/categoryTable',[App\Http\Controllers\Modules\Admin\CategoryController::class,'categoryTable'])->name('adminCategorytable');
+
+
+
+// Route::post('/admin/addCategorylist',[App\Http\Controllers\Modules\Admin\CategoryLIstTableController::class,'addCategorylist'])->name('adminCategoryadd');
+Route::get('/admin/editCategorylist/{id}',[App\Http\Controllers\Modules\Admin\CategoryLIstTableController::class,'editCategorylist']);
+Route::get('/admin/deleteCategorylist/{id}',[App\Http\Controllers\Modules\Admin\CategoryLIstTableController::class,'deleteCategorylist']);
+Route::get('/admin/categorylisttable',[App\Http\Controllers\Modules\Admin\CategoryLIstTableController::class,'categorylistTable'])->name('adminCategorytable');
+
+Route::get('/admin/categorylist',[App\Http\Controllers\Modules\Admin\CategoryLIstTableController::class, 'index'])->name('adminCategorylist');
+// Route::get('/admin/categorylisttable',[App\Http\Controllers\Modules\Admin\CategoryLIstTableController::class, 'categorylistTable'])->name('adminCategorylist');
 
 
 

@@ -63,7 +63,7 @@
 				</li>
 
                 <li class="has-sub">
-					<a href="/admin/product">
+                <a href="/admin/productlist">
 						<i class="entypo-doc-text"></i>
 						<span class="title">Product Management</span>
 					</a>

@@ -3490,6 +3490,7 @@ table > tbody > tr.highlight > th {
   height: 100%;
 }
 .btn-default {
+  float:right;
   color: #303641;
   background-color: #f0f0f1;
   border-color: #f0f0f1;

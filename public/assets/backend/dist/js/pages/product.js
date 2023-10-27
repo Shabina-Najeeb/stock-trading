@@ -93,6 +93,8 @@ $(document).ready(function(){
                 
                         var productList=Object.values(data);
                         var data='';
+                        data += '<tr><th>ID</th><th>Name</th><th>Code</th><th>Action</th></tr>';
+                     
                         for(var i=0;i<(productList[0].length);i++){
                             data+='<tr><td>'+(i+1)+'</td>';
                             data+='<td>'+productList[0][i].productname+'</td>';

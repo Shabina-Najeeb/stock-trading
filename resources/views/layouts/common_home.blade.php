@@ -213,8 +213,8 @@
 					</ul>
 				</li>
 				<li class="has-sub">
-					<a href="/admin/product">
-						<i class="entypo-bag"></i>
+				<a href="/admin/productlist">
+						<i class="entypo-doc-text"></i>
 						<span class="title">Product Management</span>
 					</a>
 					<ul>
@@ -234,7 +234,7 @@
 					
 				</li>
 				<li class="has-sub">
-					<a href="extra-icons.html">
+					<a href="/admin/categorylist">
 						<i class="entypo-doc-text"></i>
 						<span class="title">Information Management</span>
 						
