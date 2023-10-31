@@ -191,10 +191,7 @@ replaceCheckboxes(); // because there is checkbox, replace it
 giCount++;
 }
 </script>
-                            <a href="/admin/product">
-                                
-                            <button   type="submitt"value="AddProduct"   name="addproduct" Category class="btn btn-default">Delete Product</button>
-                            </a>
+                           
                             <a href="/admin/product">
 
 
@@ -266,7 +263,7 @@ giCount++;
            
 
                 <div class="form-group">
-                    <label for="field-1" class="col-sm-3 control-label green-text">Product Name</label>
+                    <label for="field-1" class="col-sm-3 control-label green-text">Product Name<span style="color:red">*</span></label>
                     
                     <div class="col-sm-5">
                         <input type="text" class="form-control" name="productname" id="productname" placeholder="please enter product name">
@@ -274,7 +271,7 @@ giCount++;
                 </div>
                 
                 <div class="form-group">
-                    <label for="field-2" class="col-sm-3 control-label green-text">Product Code</label>
+                    <label for="field-2" class="col-sm-3 control-label green-text">Product Code<span style="color:red">*</span></label>
                     
                     <div class="col-sm-5">
                         <input type="text" class="form-control" name= "productcode"id="productcode" placeholder="please enter product code">
@@ -282,7 +279,7 @@ giCount++;
                 </div>
                 <div class="form-group">
                 <div class="col-md-6">
-                    <label for="field-1" class="col-sm-3 control-label green-text">Home Page Recomentation</label>
+                    <label for="field-1" class="col-sm-3 control-label green-text">Home Page Recomentation<span style="color:red">*</span></label>
 								<!-- <label class="col-sm-6 control-label">Home Page Recomentation</label> -->
                                 <div class="col-sm-5">
 								
@@ -304,14 +301,14 @@ giCount++;
             </div>
                 <div class="form-group">
                 <div class="col-md-6">
-                    <label for="field-12" class="col-sm-3 control-label green-text">Minimum risk control fluctuation</label>
+                    <label for="field-12" class="col-sm-3 control-label green-text">Minimum risk control fluctuation<span style="color:red">*</span></label>
                     
                   
                         <input type="text" class="form-control" name="minimumrisk"id="minimumrisk" placeholder="please enter details of minimum risk control fluctuation">
               
                 </div>
                 <div class="col-md-6">
-                    <label for="field-12" class="col-sm-3 control-label green-text">Maximum risk control fluctuation</label>
+                    <label for="field-12" class="col-sm-3 control-label green-text">Maximum risk control fluctuation<span style="color:red">*</span></label>
                     
                     
                         <input type="text" class="form-control" name="maximumrisk"  id="maximumrisk" placeholder="please enter details of maximun risk control fluctuation">
@@ -322,7 +319,7 @@ giCount++;
            
                 
                 <div class="form-group">
-                    <label for="field-3" class="col-sm-3 control-label green-text">Random fluctuation range</label>
+                    <label for="field-3" class="col-sm-3 control-label green-text">Random fluctuation range<span style="color:red">*</span></label>
                     
                     <div class="col-sm-5">
                         <input type="text" class="form-control" name ="randomrange" id="randomrange" placeholder="please enter details of random fluctuation range">

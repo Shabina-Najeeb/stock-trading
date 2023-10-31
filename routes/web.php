@@ -45,6 +45,12 @@ Route::get('/admin/editUser/{id}',[App\Http\Controllers\Modules\Admin\UserContro
 Route::get('/admin/deleteUser/{id}',[App\Http\Controllers\Modules\Admin\UserController::class,'deleteUser']);
 Route::get('/admin/userTable',[App\Http\Controllers\Modules\Admin\UserController::class,'userTable'])->name('adminUsertable');
 
+Route::get('/admin/userlist',[App\Http\Controllers\Modules\Admin\UserListController::class, 'index'])->name('adminUser');
+Route::post('/admin/adduserlist',[App\Http\Controllers\Modules\Admin\UserListController::class,'addUser'])->name('adminUseradd');
+Route::get('/admin/editUserlist/{id}',[App\Http\Controllers\Modules\Admin\UserListController::class,'editUser']);
+Route::get('/admin/deleteUserlist/{id}',[App\Http\Controllers\Modules\Admin\UserListController::class,'deleteUser']);
+Route::get('/admin/userlistTable',[App\Http\Controllers\Modules\Admin\UserListController::class,'userTable'])->name('adminUsertable');
+
 Route::get('/admin/risk',[App\Http\Controllers\Modules\Admin\RiskController::class, 'index'])->name('adminRiskControl');
 Route::post('/admin/addRisk',[App\Http\Controllers\Modules\Admin\RiskController::class,'addRisk'])->name('adminaddRiskcontrol');
 Route::get('/admin/editRisk/{id}',[App\Http\Controllers\Modules\Admin\RiskController::class,'editRisk']);

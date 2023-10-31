@@ -99,6 +99,11 @@ $(document).ready(function(){
                             data+='<tr><td>'+(i+1)+'</td>';
                             data+='<td>'+productList[0][i].productname+'</td>';
                             data+='<td>'+productList[0][i].productcode+'</td>';
+                            data+='<td>'+productList[0][i].homepage+'</td>';
+                            data+='<td>'+productList[0][i].earningratio+'</td>';
+                            data+='<td>'+productList[0][i].randomrange+'</td>';
+                            data+='<td>'+productList[0][i].minimumrisk+'</td>';
+                            data+='<td>'+productList[0][i].maximumrisk+'</td>';
                             data+='<td>'+'<div class="option-box"><class="option-list"><button type="button" data-text="View recored" id="'+productList[0][i].id+'" class="product-edit-class">';
                             data+='<span class="btn btn-blue"></span></button></div>'+'</td></tr>';
                         }

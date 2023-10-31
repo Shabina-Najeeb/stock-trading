@@ -53,60 +53,25 @@
 			<!-- main menu -->
 						
 			<ul class="navbar-nav">
-            <li class="has-sub">
-					<a href="/backend">
-						<i class="entypo-gauge"></i>
-						<span class="title">Dashboard</span>
-					</a>
-					<ul>
-						
-					
-						<li>
-							
-						</li>
-						<li class="has-sub">
-							
-							<ul>
-								
-								
-								<li class="has-sub">
-									
-									<ul>
-										
-										
-									</ul>
-								</li>
-							</ul>
-						</li>
-					</ul>
-				</li>
+           
 			
 				<li class="opened active has-sub">
 					<a href="/backend">
 						<i class="entypo-layout"></i>
 						<span class="title">Background Home</span>
 					</a>
-					<ul class="visible">
-						
-					</ul>
+					
 				</li>
 				<li class="has-sub">
 				<a href="/admin/producttablelist">
 						<i class="entypo-doc-text"></i>
 						<span class="title">Product Management</span>
 					</a>
-					<ul>
-						
-						
-						
-						
 					
-						
-					</ul>
 				</li>
 				<li class="has-sub">
-					<a href="/admin/user">
-						<i class="entypo-newspaper"></i>
+					<a href="/admin/userlist">
+						<i class="entypo-doc-text"></i>
 						<span class="title">User Center</span>
 					</a>
 					
@@ -506,7 +471,7 @@
 @yield('content')
 <footer class="main">
 	
-	&copy; 2015 <strong>Neon</strong> Admin Theme by <a href="http://laborator.co" target="_blank">Laborator</a>
+	<!-- &copy; 2015 <strong>Neon</strong> Admin Theme by <a href="http://laborator.co" target="_blank">Laborator</a> -->
 
 </footer>
 			</div>
