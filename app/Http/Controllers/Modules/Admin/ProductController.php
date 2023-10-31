@@ -1,12 +1,15 @@
 <?php
 namespace App\Http\Controllers\Modules\Admin;
 use App\Http\Controllers\Controller;
+use App\CommonFunction\CommonFunction;
 Use App\Models\Product;
+use App\Models\Attachement;
+use Illuminate\Support\Facades\Storage;
 use DB;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
-
+use Response;
 class ProductController extends Controller
 {
     /**
@@ -74,7 +77,13 @@ class ProductController extends Controller
             $data = $product->save();
             $data = Product::find($product->id);
            
+            $imageUpload = new CommonFunction();
 
+            if ($request->hasFile('product_icon')) {
+                
+              $imageUpload->insertOrUpdateImage($request->title . 'image', 'PRODUCT_ICON', $product->id, $request->file('product_icon'));
+          }
+             
                
             
 
@@ -130,6 +139,12 @@ class ProductController extends Controller
            
             $data = $product->save();
             $data = Product::find($product->id);
+            $imageUpload = new CommonFunction();
+
+          if ($request->hasFile('product_icon')) {
+              
+            $imageUpload->insertOrUpdateImage($request->title . 'image', 'PRODUCT_ICON', $product->id, $request->file('product_icon'));
+        }
            
             //  dd( $product->name);
               

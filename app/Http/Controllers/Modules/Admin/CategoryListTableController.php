@@ -22,18 +22,111 @@ class CategoryListTableController extends Controller
         return view("layouts.modules.admin.article_categorylist");
     }
   
-    public function categorylistTable()
+
+    public  function addCategory(Request $request)
     {
+     
+        if ($request->categoryHiddenId) {
+            $rules = array(
+                'categoryname' => 'required',
+               
+               
+               
+            );
+            $error = Validator::make($request->all(), $rules);
+            if ($error->fails()) {
+                return response()->json(['errors' => $error->errors()->all()]);
+            }
 
-            //dd(hi);
-        $category = Category::all();
+            $category = Category::find($request->categoryHiddenId);
+            $category->categoryname = $request->categoryname;
+            $category->order = $request->order;
+           
+           
+   
+        
+            $data = $category->save();
+            $data = Category::find($category->id);
+           
 
-        // return response()->json([
-        //     'category' => $category,
-        // ]);
-         //dd($category);
-        return view("layouts.modules.admin.article_newcategorylist",['data' => $category]);
+            //    dd($category->categoryname);
+            
+
+            return response()->json(['success' => 'Data updated successfully.', 'category_FormData' => $data]);
+
+          }
+        else
+        {
+        
+            $rules = array(
+               
+               
+            );
+            $error = Validator::make($request->all(), $rules);
+            if ($error->fails()) {
+                return response()->json(['errors' => $error->errors()->all()]);
+            }
+           
+            $category = new Category();
+            $category->categoryname = $request->categoryname;
+            $category->order = $request->order;
+           
+          
+            
+           
+           
+            $data = $category->save();
+            $data = Category::find($category->id);
+           
+            //  dd( $userdetails->name);
+              
+            
+        
+
+            return response()->json(['success' => 'Data Added successfully.', 'category_FormData' => $data]);
+          }
+     }
+    public function categoryTable()
+    {   
+         {
+    
+          
+             $category = Category::all();
+     
+             return response()->json([
+                 'category' => $category,
+             ]);
+         }
+      
+  }
+
+ 
+    public function editCategory($id)
+    {
+        // dd(hi);
+        $data = Category::find($id);
+  
+        return response()->json(['data' => $data]);
+  
     }
+  
+    
+  public function deleteCategory($id)
+  {
+
+      $category = Category::find($id);
+
+      $category ->delete($id);
+
+      return response()->json([
+
+          'success' => 'Data deleted successfully!',
+
+          'category ' => $category ,
+
+      ]);
+
+  }
  
    
 }

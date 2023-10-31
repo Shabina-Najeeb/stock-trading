@@ -9,6 +9,7 @@ use App\Http\Controllers\Modules\Admin\RiskController;
 use App\Http\Controllers\Modules\Admin\OrdersController;
 use App\Http\Controllers\Modules\Admin\CategoryController;
 use App\Http\Controllers\Modules\Admin\CategoryLIstTableController;
+use App\Http\Controllers\Modules\Admin\AddarticleController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -30,7 +31,13 @@ Route::post('/admin/addproduct',[App\Http\Controllers\Modules\Admin\ProductContr
 Route::get('/admin/editProduct/{id}',[App\Http\Controllers\Modules\Admin\ProductController::class,'editProduct']);
 Route::get('/admin/deleteProduct/{id}',[App\Http\Controllers\Modules\Admin\ProductController::class,'deleteProduct']);
 Route::get('/admin/productTable',[App\Http\Controllers\Modules\Admin\ProductController::class,'productTable'])->name('adminproducttable');
-Route::get('/admin/productlist',[App\Http\Controllers\Modules\Admin\ProductlistController::class, 'index'])->name('adminlistproduct');
+
+
+Route::get('/admin/producttablelist',[App\Http\Controllers\Modules\Admin\ProductlistController::class, 'index'])->name('adminlistproduct');
+Route::post('/admin/addproductlist',[App\Http\Controllers\Modules\Admin\ProductlistController::class,'addProduct'])->name('adminaddproduct');
+Route::get('/admin/editProductlist/{id}',[App\Http\Controllers\Modules\Admin\ProductlistController::class,'editProduct']);
+Route::get('/admin/deleteProductlist/{id}',[App\Http\Controllers\Modules\Admin\ProductlistController::class,'deleteProduct']);
+Route::get('/admin/productTabledisplay',[App\Http\Controllers\Modules\Admin\ProductlistController::class, 'productTable'])->name('adminlistproduct');
 
 Route::get('/admin/user',[App\Http\Controllers\Modules\Admin\UserController::class, 'index'])->name('adminUser');
 Route::post('/admin/adduser',[App\Http\Controllers\Modules\Admin\UserController::class,'addUser'])->name('adminUseradd');
@@ -56,13 +63,27 @@ Route::get('/admin/categoryTable',[App\Http\Controllers\Modules\Admin\CategoryCo
 
 
 
-// Route::post('/admin/addCategorylist',[App\Http\Controllers\Modules\Admin\CategoryLIstTableController::class,'addCategorylist'])->name('adminCategoryadd');
-Route::get('/admin/editCategorylist/{id}',[App\Http\Controllers\Modules\Admin\CategoryLIstTableController::class,'editCategorylist']);
-Route::get('/admin/deleteCategorylist/{id}',[App\Http\Controllers\Modules\Admin\CategoryLIstTableController::class,'deleteCategorylist']);
-Route::get('/admin/categorylisttable',[App\Http\Controllers\Modules\Admin\CategoryLIstTableController::class,'categorylistTable'])->name('adminCategorytable');
+ Route::post('/admin/addCategory',[App\Http\Controllers\Modules\Admin\CategoryLIstTableController::class,'addCategory'])->name('adminCategoryadd');
+Route::get('/admin/editCategory/{id}',[App\Http\Controllers\Modules\Admin\CategoryLIstTableController::class,'editCategory']);
+Route::get('/admin/deleteCategory/{id}',[App\Http\Controllers\Modules\Admin\CategoryLIstTableController::class,'deleteCategory']);
+Route::get('/admin/categorytable',[App\Http\Controllers\Modules\Admin\CategoryLIstTableController::class,'categoryTable'])->name('adminCategorytable');
 
 Route::get('/admin/categorylist',[App\Http\Controllers\Modules\Admin\CategoryLIstTableController::class, 'index'])->name('adminCategorylist');
-// Route::get('/admin/categorylisttable',[App\Http\Controllers\Modules\Admin\CategoryLIstTableController::class, 'categorylistTable'])->name('adminCategorylist');
+ 
+
+
+Route::get('/admin/article',[App\Http\Controllers\Modules\Admin\AddarticleController::class,'index'])->name('adminArticleadd');
+Route::post('/admin/addArticle',[App\Http\Controllers\Modules\Admin\AddarticleController::class,'addArticle'])->name('adminAddarticleadd');
+Route::get('/admin/editArticle/{id}',[App\Http\Controllers\Modules\Admin\AddarticleController::class,'editArticle']);
+Route::get('/admin/deleteArticle/{id}',[App\Http\Controllers\Modules\Admin\AddarticleController::class,'deleteArticle']);
+Route::get('/admin/articleTable',[App\Http\Controllers\Modules\Admin\AddarticleController::class,'articleTable'])->name('adminArticletable');
+
+Route::get('/admin/articlelist',[App\Http\Controllers\Modules\Admin\ArticleListController::class,'index'])->name('adminArticleadd');
+Route::post('/admin/addArticlelist',[App\Http\Controllers\Modules\Admin\ArticleListController::class,'addArticle'])->name('adminAddarticleadd');
+Route::get('/admin/editArticlelist/{id}',[App\Http\Controllers\Modules\Admin\ArticleListController::class,'editArticle']);
+Route::get('/admin/deleteArticlelist/{id}',[App\Http\Controllers\Modules\Admin\ArticleListControllerr::class,'deleteArticle']);
+Route::get('/admin/articlelistTable',[App\Http\Controllers\Modules\Admin\ArticleListController::class,'articleTable'])->name('adminArticletable');
+
 
 
 

@@ -62,54 +62,52 @@
 					
 				</li>
 
-                <li class="has-sub">
-					<a href="/admin/product">
-						<i class="entypo-doc-text"></i>
+         
+
+                <li class="active opened active has-sub">
+					<a href="/admin/producttablelist">
+						<i class="entypo-gauge"></i>
 						<span class="title">Product Management</span>
 					</a>
-                    <a href="/admin/productlist">
-						<i class="entypo-doc-text"></i>
-						<span class="title">Product List</span>
-					</a>
-                    <a href="/admin/risk">
-						<i class="entypo-doc-text"></i>
-						<span class="title">Risk Control Management</span>
-					</a>
-					
-				</li>
-
-
-
-
-
-                <li class="has-sub">
-					<a href="#">
-						<i class="entypo-gauge"></i>
-						<span class="title">Order Management</span>
-					</a>
-                    <ul>
-					<li>
-							<a href="#">
-								<span class="title">Transaction Flow</span>
-							</a>
-						</li>
-                        <li>
-							<a href="#">
-								<span class="title">Closing Log</span>
+					<ul class="visible">
+						<li class="active">
+							<a href="/admin/producttablelist">
+								<span class="title">Product List</span>
 							</a>
 						</li>
 						
-					
 					</ul>
-                   	
+                    <ul class="visible">
+						<li class="active">
+							<a href="/admin/risk">
+								<span class="title">Risk Control Management</span>
+							</a>
+						</li>
+						
+					</ul>
 				</li>
-				
                 
-				
-				
-				
-				
-				
+                <li class="active opened active has-sub">
+					<a href="/admin/order">
+						<i class="entypo-gauge"></i>
+						<span class="title">Order Management</span>
+					</a>
+					<ul class="visible">
+						<li class="active">
+							<a href="/admin/order">
+								<span class="title">Transaction flow</span>
+							</a>
+						</li>
+						
+					</ul>
+                    <ul class="visible">
+						<li class="active">
+							<a href="/admin/order_log">
+								<span class="title">Closing log</span>
+							</a>
+						</li>
+						
+					</ul>
 				</li>
 			</ul>
 			

@@ -54,148 +54,26 @@
 						
 			<ul class="navbar-nav">
             <li class="has-sub">
-					<a href="index.html">
+					<a href="/backend">
 						<i class="entypo-gauge"></i>
 						<span class="title">Dashboard</span>
 					</a>
 					<ul>
+						
+					
 						<li>
-							<a href="index.html">
-								<span class="title">Dashboard 1</span>
-							</a>
-						</li>
-						<li>
-							<a href="dashboard-2.html">
-								<span class="title">Dashboard 2</span>
-							</a>
-						</li>
-						<li>
-							<a href="dashboard-3.html">
-								<span class="title">Dashboard 3</span>
-							</a>
+							
 						</li>
 						<li class="has-sub">
-							<a href="skin-black.html">
-								<span class="title">Skins</span>
-							</a>
+							
 							<ul>
-								<li>
-									<a href="skin-black.html">
-										<span class="title">Black Skin</span>
-									</a>
-								</li>
-								<li>
-									<a href="skin-white.html">
-										<span class="title">White Skin</span>
-									</a>
-								</li>
-								<li>
-									<a href="skin-purple.html">
-										<span class="title">Purple Skin</span>
-									</a>
-								</li>
-								<li>
-									<a href="skin-cafe.html">
-										<span class="title">Cafe Skin</span>
-									</a>
-								</li>
-								<li>
-									<a href="skin-red.html">
-										<span class="title">Red Skin</span>
-									</a>
-								</li>
-								<li>
-									<a href="skin-green.html">
-										<span class="title">Green Skin</span>
-									</a>
-								</li>
-								<li>
-									<a href="skin-yellow.html">
-										<span class="title">Yellow Skin</span>
-									</a>
-								</li>
-								<li>
-									<a href="skin-blue.html">
-										<span class="title">Blue Skin</span>
-									</a>
-								</li>
-								<li>
-									<a href="skin-facebook.html">
-										<span class="title">Facebook Skin</span>
-										<span class="badge badge-secondary badge-roundless">New</span>
-									</a>
-								</li>
-							</ul>
-						</li>
-						<li>
-							<a href="highlights.html">
-								<span class="title">What's New</span>
-								<span class="badge badge-success badge-roundless">v2.0</span>
-							</a>
-						</li>
-						<li class="has-sub">
-							<a href="#">
-								<span class="title">Menu Levels</span>
-							</a>
-							<ul>
-								<li>
-									<a href="#">
-										<i class="entypo-flow-line"></i>
-										<span class="title">Menu Level 1.1</span>
-									</a>
-								</li>
-								<li>
-									<a href="#">
-										<i class="entypo-flow-line"></i>
-										<span class="title">Menu Level 1.2</span>
-									</a>
-								</li>
+								
+								
 								<li class="has-sub">
-									<a href="#">
-										<i class="entypo-flow-line"></i>
-										<span class="title">Menu Level 1.3</span>
-									</a>
+									
 									<ul>
-										<li>
-											<a href="#">
-												<i class="entypo-flow-parallel"></i>
-												<span class="title">Menu Level 2.1</span>
-											</a>
-										</li>
-										<li class="has-sub">
-											<a href="#">
-												<i class="entypo-flow-parallel"></i>
-												<span class="title">Menu Level 2.2</span>
-											</a>
-											<ul>
-												<li class="has-sub">
-													<a href="#">
-														<i class="entypo-flow-cascade"></i>
-														<span class="title">Menu Level 3.1</span>
-													</a>
-													<ul>
-														<li>
-															<a href="#">
-																<i class="entypo-flow-branch"></i>
-																<span class="title">Menu Level 4.1</span>
-															</a>
-														</li>
-													</ul>
-												</li>
-												<li>
-													<a href="#">
-														<i class="entypo-flow-cascade"></i>
-														<span class="title">Menu Level 3.2</span>
-													</a>
-												</li>
-											</ul>
-										</li>
-										<li>
-											<a href="#">
-												<i class="entypo-flow-parallel"></i>
-												<span class="title">Menu Level 2.3</span>
-											</a>
-										</li>
+										
+										
 									</ul>
 								</li>
 							</ul>
@@ -213,7 +91,7 @@
 					</ul>
 				</li>
 				<li class="has-sub">
-				<a href="/admin/productlist">
+				<a href="/admin/producttablelist">
 						<i class="entypo-doc-text"></i>
 						<span class="title">Product Management</span>
 					</a>

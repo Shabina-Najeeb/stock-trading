@@ -167,12 +167,19 @@
 	<td>{{ $item->order }}</td>
 	<td>{{ $item->categoryname }}</td>
 	<td>{{ $item->created_at }}</td>
-	<td><button>Hello</button></td>
+	<td>
+	<a href="/admin/editCategorylist">
+					<button type="button"   value="Edit" id="updateCategoryButton"class="btn btn-green">Edit</button>
+							</a>
+							<a href="/admin/deleteCategorylist">
+					<button type="button"   value="Delete" id="deleteCategoryButton"class="btn btn-danger">Delete</button>
+							</a>
 </tr>
 @endforeach
 
 </tbody>
 
+<!-- <button type="button"   value="Edit" id="updateCategoryButton"class="btn btn-orange">Edit</button> -->
 <!-- <tr>
     <td>
         <div class="checkbox checkbox-replace">
@@ -239,7 +246,8 @@ Add Row
 
 <br />
 <br />
-
+</body>
+</html>
 
 <!-- <script src="{{asset('assets/backend/dist/js/pages/categorylist.js')}}"></script> -->
 

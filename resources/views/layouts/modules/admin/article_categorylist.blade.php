@@ -62,59 +62,77 @@
 					
 				</li>
 
-                <li class="has-sub">
-					<a href="/admin/product">
-						<i class="entypo-doc-text"></i>
-						<span class="title">Product Management</span>
-					</a>
-                    <a href="/admin/productlist">
-						<i class="entypo-doc-text"></i>
-						<span class="title">Product List</span>
-					</a>
-                    <a href="/admin/risk">
-						<i class="entypo-doc-text"></i>
-						<span class="title">Risk Control Management</span>
-					</a>
-					
-				</li>
-
 
 
 
 
                 <li class="active opened active has-sub">
-					<a href="#">
+					<a href="/admin/categorylist">
 						<i class="entypo-gauge"></i>
-						<span class="title">Order Management</span>
+						<span class="title">Article Configuaration</span>
 					</a>
 					<ul class="visible">
 						<li class="active">
-							<a href="/admin/order">
-								<span class="title">Transaction Flow</span>
+							<a href="/admin/categorylist">
+								<span class="title">Article List</span>
 							</a>
 						</li>
-						<li>
-							<a href="/admin/order_log">
-								<span class="title">Closing log</span>
+						<li class="active">
+							<a href="/admin/articlelist">
+								<span class="title">Article Classification</span>
 							</a>
 						</li>
+						
 					</ul>
 				</li>
+                
+
+
+
+
 				
+                <li class="active opened active has-sub">
+					<a href="#">
+						<i class="entypo-gauge"></i>
+						<span class="title">Site Message Management</span>
+					</a>
+					<ul class="visible">
+						<li class="active">
+							<a href="#">
+								<span class="title">Site Message List</span>
+							</a>
+						</li>
+						
+					</ul>
+				</li>
                 
 				
 				
 				
 				
 				
-				</li>
+			
 			</ul>
 			
 		</div>
 
 	</div>
 
-	<div class="main-content">
+<hr />
+
+</br>
+</br>
+</br>
+
+
+
+<!-- Raw Links -->
+
+
+
+<!-- Raw Links -->
+
+<div class="main-content">
 				
 </br>
 
@@ -129,22 +147,66 @@
 
 
 
-<h3>Category List</h3>
 
+<script type="text/javascript">
+jQuery( window ).load( function() {
+var $table2 = jQuery( "#table-2" );
 
+// Initialize DataTable
+$table2.DataTable( {
+"sDom": "tip",
+"bStateSave": false,
+"iDisplayLength": 8,
+"aoColumns": [
+    { "bSortable": false },
+    null,
+    null,
+    null,
+    null
+],
+"bStateSave": true
+});
 
-<li>
+// Highlighted rows
+$table2.find( "tbody input[type=checkbox]" ).each(function(i, el) {
+var $this = $(el),
+    $p = $this.closest('tr');
+
+$( el ).on( 'change', function() {
+    var is_checked = $this.is(':checked');
+    
+    $p[is_checked ? 'addClass' : 'removeClass']( 'highlight' );
+} );
+} );
+
+// Replace Checboxes
+$table2.find( ".pagination a" ).click( function( ev ) {
+replaceCheckboxes();
+} );
+} );
+
+// Sample Function to add new row
+var giCount = 1;
+
+function fnClickAddRow() {
+jQuery('#table-2').dataTable().fnAddData( [ '<div class="checkbox checkbox-replace"><input type="checkbox" /></div>', giCount + ".1", giCount + ".2", giCount + ".3", giCount + ".4" ] );
+replaceCheckboxes(); // because there is checkbox, replace it
+giCount++;
+}
+</script>
+					<li>
 							<a href="/admin/category">
 							<button   type="submitt"value="AddArticle"   name="addcategory" Category class="btn btn-default">Add Article</button>
 							</a>
 						</li>
-
-</br>
-</br>
-</br>
+                           
 
 
-<table class="table table-bordered table-striped datatable" id="categorylistTable">
+
+
+
+<table class="table table-bordered table-striped datatable" id="categoryTable">
+<h3>Category table</h3>
 <thead>
 <tr>
     <!-- <th>
@@ -160,66 +222,64 @@
 </tr>
 </thead>
 
-<tbody id="categorylistTbody">
+<tbody id="categoryTbody">
 
 
 
 </tbody>
 
-<!-- <tr>
-    <td>
-        <div class="checkbox checkbox-replace">
-            <input type="checkbox" id="chk-1">
-        </div>
-    </td>
-    <td>1</td>
-    <td>central bank digital currency</td>
-    <td>etc_usdt</td>
-    <td> <a href="#" class="btn btn-danger">
-          
-           Cancel
-        </a>
-        <a href="#" class="btn btn-success">
-          
-          Recomond
-       </a></td>
-    <td>open market</td>
-    <td>0.008</td>
-    <td>0.0001</td>
-    <td>0.0067</td>
-  
-    <td>
-        <a href="#" class="btn btn-success "> -->
-            <!-- <i class="entypo-pencil"></i> -->
-            <!-- Turnon
-        </a>
-        
-        <a href="#" class="btn btn-danger ">
-       
-            Close the market
-        </a>
-        <a href="#" class="btn btn-orange ">
-            <i class="entypo-pencil"></i>
-           Edit 
-        </a>
-        <a href="#" class="btn btn-danger">
-            <i class="entypo-cancel"></i>
-           Delete
-        </a>
-        <a href="#" class="btn btn-blue ">
-          
-           Show profit
-        </a>
-        <a href="#" class="btn btn-warning">
-           
-           Obvious loss
-        </a>
-    </td>
-</tr>
 
 
-</tbody> -->
 </table>
+</div>
+</div>
+<div>
+<div class="panel-body">
+            
+            <form role="form" style="display:none;" id="category_form" class="form-horizontal form-groups-bordered">
+           
+              @csrf
+
+                <div class="form-group">
+                    <label for="field-1" class="col-sm-3 control-label">Category Name</label>
+                    
+                    <div class="col-sm-5">
+                        <input type="text" class="form-control" name="categoryname" id="categoryname" placeholder="please enter category name">
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="field-2" class="col-sm-3 control-label">Sort by category</label>
+                    
+                    <div class="col-sm-5">
+                        <input type="text" class="form-control" name= "order"id="order" placeholder="please enter category order">
+                    </div>
+                </div>
+             
+                 
+           
+                
+               
+ 
+                <div class="form-group">
+                    <div class="col-sm-offset-3 col-sm-5">
+
+                    <input type="hidden" id="categoryHiddenId" name="categoryHiddenId">
+            
+                    <button type="submit" value="Add" id="addCategoryButton" class="btn btn-success">Save</button>
+			
+					<button type="submit"   value="update" id="updateCategoryButton"class="btn btn-orange">Edit</button>
+							
+                  
+                    <button type="submit"   value="Delete" id="deleteCategoryButton"class="btn btn-danger">Delete</button>
+                    <button type="button" value="Add" id="newCategoryButton" class="btn btn-blue">New</button>
+                    </div>
+                </div>
+            </form>
+            
+        </div>
+    	
+</div>
 
 <br />
 
@@ -233,7 +293,8 @@ Add Row
 <br />
 <br />
 
-
+</body>
+</html>
 <script src="{{asset('assets/backend/dist/js/pages/categorylist.js')}}"></script>
 
 @endsection

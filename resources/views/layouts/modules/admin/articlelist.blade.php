@@ -62,6 +62,10 @@
 					
 				</li>
 
+
+
+
+
                 <li class="active opened active has-sub">
 					<a href="/admin/categorylist">
 						<i class="entypo-gauge"></i>
@@ -101,6 +105,13 @@
 						
 					</ul>
 				</li>
+                
+				
+				
+				
+				
+				
+			
 			</ul>
 			
 		</div>
@@ -109,28 +120,126 @@
 
 <hr />
 
-    
+</br>
+</br>
+</br>
+
+
+
+<!-- Raw Links -->
+
+
+
+<!-- Raw Links -->
+
 <div class="main-content">
 				
-		
+</br>
 
 
-                <!-- Raw Links -->
-                <div class="col-md-6 col-sm-4 clearfix hidden-xs">
-                
-                   
-                
-                </div>
-                      
-        
-<h2>Add Article</h2>
-<br />
+<!-- Raw Links -->
 
 
+
+<!-- Raw Links -->
+
+
+
+
+
+
+<script type="text/javascript">
+jQuery( window ).load( function() {
+var $table2 = jQuery( "#table-2" );
+
+// Initialize DataTable
+$table2.DataTable( {
+"sDom": "tip",
+"bStateSave": false,
+"iDisplayLength": 8,
+"aoColumns": [
+    { "bSortable": false },
+    null,
+    null,
+    null,
+    null
+],
+"bStateSave": true
+});
+
+// Highlighted rows
+$table2.find( "tbody input[type=checkbox]" ).each(function(i, el) {
+var $this = $(el),
+    $p = $this.closest('tr');
+
+$( el ).on( 'change', function() {
+    var is_checked = $this.is(':checked');
+    
+    $p[is_checked ? 'addClass' : 'removeClass']( 'highlight' );
+} );
+} );
+
+// Replace Checboxes
+$table2.find( ".pagination a" ).click( function( ev ) {
+replaceCheckboxes();
+} );
+} );
+
+// Sample Function to add new row
+var giCount = 1;
+
+function fnClickAddRow() {
+jQuery('#table-2').dataTable().fnAddData( [ '<div class="checkbox checkbox-replace"><input type="checkbox" /></div>', giCount + ".1", giCount + ".2", giCount + ".3", giCount + ".4" ] );
+replaceCheckboxes(); // because there is checkbox, replace it
+giCount++;
+}
+</script>
+					<li>
+							<a href="/admin/article">
+							<button   type="submitt"value="AddArticle"   name="addcategory" Category class="btn btn-default">Add Article</button>
+							</a>
+						</li>
+                           
+
+
+
+
+
+<table class="table table-bordered table-striped datatable" id="categoryTable">
+<h3>Article List</h3>
+<thead>
+<tr>
+    <!-- <th>
+        <div class="checkbox checkbox-replace">
+            <input type="checkbox" id="chk-1">
+        </div>
+    </th> -->
+    <th>Refresh</th>
+    <th>Article Name</th>
+	<th>Article Classification</th>
+    <th>Action</th>
+   
+</tr>
+</thead>
+
+<tbody id="categoryTbody">
+
+
+
+</tbody>
+
+
+
+</table>
+</div>
+</div>
+
+
+<div>
 <div class="row">
 <div class="col-md-12">
     
-    <div class="panel panel-primary" data-collapsed="0">
+    <div  class="panel panel-primary" data-collapsed="0">
     
         <div class="panel-heading">
             <div class="panel-title">
@@ -220,41 +329,20 @@
     
     </div>
 
-</div>
-</div>
+<br />
+
+<!-- <a href="javascript: fnClickAddRow();" class="btn btn-primary">
+<i class="entypo-plus"></i>
+Add Row
+</a> -->
 
 
 
-<h3>Article Table</h3>
+<br />
+<br />
 
-
-
-
-
-<table class="table table-bordered table-striped datatable" id="articleTable">
-<thead>
-<tr>
-    <th>
-        <div class="checkbox checkbox-replace">
-            <input type="checkbox" id="chk-1">
-        </div>
-    </th>
-    <th>Sl No</th>
-    <th>Article Name</th>
-    <th>Article Classification</th>
- 
-    <th>Actions</th>
-</tr>
-</thead>
-
-<tbody id="articleTbody">
-
-
-
-</tbody>
-</table>
-
-
-<script src="{{asset('assets/backend/dist/js/pages/article.js')}}"></script>
+</body>
+</html>
+<script src="{{asset('assets/backend/dist/js/pages/articlelist.js')}}"></script>
 
 @endsection

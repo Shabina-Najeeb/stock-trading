@@ -62,47 +62,57 @@
 					
 				</li>
 
-                <li class="has-sub">
-					<a href="/admin/productlist">
-						<i class="entypo-doc-text"></i>
+         
+
+                <li class="active opened active has-sub">
+					<a href="/admin/producttablelist">
+						<i class="entypo-gauge"></i>
 						<span class="title">Product Management</span>
 					</a>
-                    <a href="/admin/productlist">
-						<i class="entypo-doc-text"></i>
-						<span class="title">Product List</span>
-					</a>
-                    <a href="/admin/risk">
-						<i class="entypo-doc-text"></i>
-						<span class="title">Risk Control Management</span>
-					</a>
-					
-				</li>
-
-
-
-
-
-                <li class="has-sub">
-					<a href="#">
-						<i class="entypo-gauge"></i>
-						<span class="title">Order Management</span>
-					</a>
-                    <ul>
-					<li>
-							<a href="#">
-								<span class="title">Transaction Flow</span>
-							</a>
-						</li>
-                        <li>
-							<a href="#">
-								<span class="title">Closing Log</span>
+					<ul class="visible">
+						<li class="active">
+							<a href="/admin/producttablelist">
+								<span class="title">Product List</span>
 							</a>
 						</li>
 						
-					
 					</ul>
-                   	
+                    <ul class="visible">
+						<li class="active">
+							<a href="/admin/risk">
+								<span class="title">Risk Control Management</span>
+							</a>
+						</li>
+						
+					</ul>
 				</li>
+                
+                <li class="active opened active has-sub">
+					<a href="/admin/order">
+						<i class="entypo-gauge"></i>
+						<span class="title">Order Management</span>
+					</a>
+					<ul class="visible">
+						<li class="active">
+							<a href="/admin/order">
+								<span class="title">Transaction flow</span>
+							</a>
+						</li>
+						
+					</ul>
+                    <ul class="visible">
+						<li class="active">
+							<a href="/admin/order_log">
+								<span class="title">Closing log</span>
+							</a>
+						</li>
+						
+					</ul>
+				</li>
+                
+
+
+               
 				
                 
 				
@@ -110,7 +120,6 @@
 				
 				
 				
-				</li>
 			</ul>
 			
 		</div>
@@ -129,10 +138,12 @@
 <!-- Raw Links -->
 
 
+</br>
+</br>
+</br>
 
 
 
-<h3>Product List</h3>
 
 <script type="text/javascript">
 jQuery( window ).load( function() {
@@ -197,15 +208,15 @@ giCount++;
 </br>
 
 
+<div>
 
-<table class="table table-bordered table-striped datatable" id="productlistTable">
+
+<table class="table table-bordered table-striped datatable" id="productTable">
+
 <thead>
+<h3>Product table</h3>
 <tr>
-    <!-- <th>
-        <div class="checkbox checkbox-replace">
-            <input type="checkbox" id="chk-1">
-        </div>
-    </th> -->
+
     <th>Refresh</th>
     <th>Product title</th>
     <th>product code</th>
@@ -218,67 +229,309 @@ giCount++;
 </tr>
 </thead>
 
-<tbody id="productlistTbody">
+<tbody id="productTbody">
 
 
 
 </tbody>
 
-<!-- <tr>
-    <td>
-        <div class="checkbox checkbox-replace">
-            <input type="checkbox" id="chk-1">
-        </div>
-    </td>
-    <td>1</td>
-    <td>central bank digital currency</td>
-    <td>etc_usdt</td>
-    <td> <a href="#" class="btn btn-danger">
-          
-           Cancel
-        </a>
-        <a href="#" class="btn btn-success">
-          
-          Recomond
-       </a></td>
-    <td>open market</td>
-    <td>0.008</td>
-    <td>0.0001</td>
-    <td>0.0067</td>
-  
-    <td>
-        <a href="#" class="btn btn-success "> -->
-            <!-- <i class="entypo-pencil"></i> -->
-            <!-- Turnon
-        </a>
-        
-        <a href="#" class="btn btn-danger ">
-       
-            Close the market
-        </a>
-        <a href="#" class="btn btn-orange ">
-            <i class="entypo-pencil"></i>
-           Edit 
-        </a>
-        <a href="#" class="btn btn-danger">
-            <i class="entypo-cancel"></i>
-           Delete
-        </a>
-        <a href="#" class="btn btn-blue ">
-          
-           Show profit
-        </a>
-        <a href="#" class="btn btn-warning">
-           
-           Obvious loss
-        </a>
-    </td>
-</tr>
 
-
-</tbody> -->
 </table>
+</div>
 
+
+
+<div>
+
+<form style="display:none;" role="form" id="product_form" class="form-horizontal form-groups-bordered">
+           
+           @csrf
+
+<div   class="panel panel-primary" data-collapsed="0">
+    
+    <div class="panel-heading">
+        <div class="panel-title">
+          Input Product Details 
+        </div>
+        
+        <div class="panel-options">
+            <a href="#sample-modal" data-toggle="modal" data-target="#sample-modal-dialog-1" class="bg"><i class="entypo-cog"></i></a>
+            <a href="#" data-rel="collapse"><i class="entypo-down-open"></i></a>
+            <a href="#" data-rel="reload"><i class="entypo-arrows-ccw"></i></a>
+            <a href="#" data-rel="close"><i class="entypo-cancel"></i></a>
+        </div>
+    </div>
+<div class="panel-body">
+            
+           
+
+                <div class="form-group">
+                    <label for="field-1" class="col-sm-3 control-label green-text">Product Name</label>
+                    
+                    <div class="col-sm-5">
+                        <input type="text" class="form-control" name="productname" id="productname" placeholder="please enter product name">
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="field-2" class="col-sm-3 control-label green-text">Product Code</label>
+                    
+                    <div class="col-sm-5">
+                        <input type="text" class="form-control" name= "productcode"id="productcode" placeholder="please enter product code">
+                    </div>
+                </div>
+                <div class="form-group">
+                <div class="col-md-6">
+                    <label for="field-1" class="col-sm-3 control-label green-text">Home Page Recomentation</label>
+								<!-- <label class="col-sm-6 control-label">Home Page Recomentation</label> -->
+                                <div class="col-sm-5">
+								
+									<select class="form-control" id ="homepage" name="homepage">
+										<option>Recomented</option>
+										<option>Cancelled</option>
+										
+									</select>
+
+							</div>
+                </div>
+                 <div class="col-md-6">
+                    <label for="field-1" class="col-sm-3 control-label green-text">Product Icon</label>
+                    
+                    <div class="col-sm-5">
+                        <input type="file" class="form-control"  name= "product_icon"id="product_icon" placeholder="please add product Icon">
+                    </div>
+                </div>
+            </div>
+                <div class="form-group">
+                <div class="col-md-6">
+                    <label for="field-12" class="col-sm-3 control-label green-text">Minimum risk control fluctuation</label>
+                    
+                  
+                        <input type="text" class="form-control" name="minimumrisk"id="minimumrisk" placeholder="please enter details of minimum risk control fluctuation">
+              
+                </div>
+                <div class="col-md-6">
+                    <label for="field-12" class="col-sm-3 control-label green-text">Maximum risk control fluctuation</label>
+                    
+                    
+                        <input type="text" class="form-control" name="maximumrisk"  id="maximumrisk" placeholder="please enter details of maximun risk control fluctuation">
+                   
+                </div>
+</div>
+
+           
+                
+                <div class="form-group">
+                    <label for="field-3" class="col-sm-3 control-label green-text">Random fluctuation range</label>
+                    
+                    <div class="col-sm-5">
+                        <input type="text" class="form-control" name ="randomrange" id="randomrange" placeholder="please enter details of random fluctuation range">
+                    </div>
+                </div>
+
+              
+                    
+                      
+                <div class="form-group">
+                    
+                    <div class="col-md-3">
+                    <label for="field-3" class="col-sm-6 control-label green-text">Time play interval【1】</label>
+                    <input type="text" class="form-control" name = "time1" id="time1" placeholder="please enter details of time play interval">
+
+							</div>
+                          
+                    <div class="col-md-3">
+                    <label for="field-3" class="col-sm-6 control-label green-text">Time play interval【2】</label>
+
+                    <input type="text" class="form-control" name = "time2" id="time2" placeholder="please enter details of time play interval">
+                                
+							</div>
+                           
+                    
+                    <div class="col-md-3">
+                    <label for="field-3" class="col-sm-6 control-label green-text">Time play interval【3】</label>
+                    <input type="text" class="form-control" name = "time3" id="time3" placeholder="please enter details of time play interval">
+							</div>
+                           
+                    
+                    <div class="col-md-3">
+                    <label for="field-3" class="col-sm-6 control-label green-text">Time play interval【4】</label>
+                    <input type="text" class="form-control" name = "time4" id="time4" placeholder="please enter details of time play interval">
+                                
+					</div>
+               </div>
+              
+
+
+              
+                <div class="form-group">
+                <div class="col-md-3">
+                    
+                    <label for="field-3" class="col-sm-6 control-label green-text">Profit and loss ratio [1]</label>
+                    
+                  
+                        <input type="text" class="form-control" name ="profit1"  id="profit1" placeholder="please enter details of profit and loss ratio">
+                    
+                </div>
+
+         
+                <div class="col-md-3">
+                    <label for="field-3" class="col-sm-6 control-label green-text">Profit and loss ratio [2]</label>
+                    
+                   
+                        <input type="text" class="form-control" name ="profit2"  id="profit2" placeholder="please enter details of profit and loss ratio">
+                   
+                </div>
+                <div class="col-md-3">
+                    
+                    <label for="field-3" class="col-sm-6 control-label green-text">Profit and loss ratio [3]</label>
+                    
+                   
+                        <input type="text" class="form-control" name ="profit3"  id="profit3" placeholder="please enter details of profit and loss ratio">
+                   
+                </div>
+                <div class="col-md-3">
+                    
+                    <label for="field-3" class="col-sm-6 control-label green-text">Profit and loss ratio [4]</label>
+                    
+                  
+                        <input type="text" class="form-control" name ="profit4"  id="profit4" placeholder="please enter details of profit and loss ratio">
+              </div>
+         </div>
+
+                <div class="form-group">
+                <div class="col-md-3">
+                    
+                    <label for="field-3" class="col-sm-6 control-label green-text">Loss ratio [1]</label>
+                    
+                   
+                        <input type="text" class="form-control" name ="loss1"  id="loss1" placeholder="please enter details of loss ratio">
+                  
+                </div>
+                
+                <div class="col-md-3">
+                    
+                    <label for="field-3" class="col-sm-6 control-label green-text">Loss ratio [2]</label>
+                    
+                   
+                        <input type="text" class="form-control" name ="loss2"  id="loss2" placeholder="please enter details of loss ratio">
+                    
+                </div>
+                <div class="col-md-3">
+                    
+                    <label for="field-3" class="col-sm-6 control-label green-text">Loss ratio [3]</label>
+                    
+                
+                        <input type="text" class="form-control" name ="loss3"  id="loss3" placeholder="please enter details of loss ratio">
+                    
+                </div>
+                <div class="col-md-3">
+                    
+                    <label for="field-3" class="col-sm-6 control-label green-text">Loss ratio [4]</label>
+                    
+             
+                        <input type="text" class="form-control" name ="loss4"  id="loss4" placeholder="please enter details of loss ratio">
+                    </div>
+                </div>
+                
+                
+                
+                <div class="form-group">
+                <div class="col-md-6">
+                    <label for="field-ta" class="col-sm-6 control-label green-text">Earnings floating ratio range</label>
+                    
+                  
+                    <input type="text" class="form-control" name ="earningratio"  id="earningratio" placeholder="please enter details of Earning ratio">
+                   
+                </div>
+                
+                <div class="col-md-6">
+                    <label for="field-ta" class="col-sm-6 control-label green-text"> Floating ratio range under loss</label>
+                    
+               
+                    <input type="text" class="form-control" name ="floatingratio"  id="floatingratio" placeholder="please enter details of Floating ratio">
+                    </div>
+                </div>
+                <div class="form-group">
+                <div class="col-md-3">
+                    
+                    <label for="field-ta" class="col-sm-12 control-label green-text"> Market Opening time Monday</label>
+                    
+                    <input type="text" class="form-control" name ="monday"  id="monday" placeholder="please enter details of monday">
+                    
+                </div>
+                <div class="col-md-3">
+                    <label for="field-ta" class="col-sm-12 control-label green-text"> Market Opening time Tuesday</label>
+                    
+                    
+                    <input type="text" class="form-control" name ="tuesday"  id="tuesday" placeholder="please enter details of tuesday">
+                   
+                </div>
+                <div class="col-md-3">
+                    <label for="field-ta" class="col-sm-12 control-label green-text"> Market Opening time Wednesday</label>
+                    
+                 
+                    <input type="text" class="form-control" name ="wednesday"  id="wednesday" placeholder="please enter details of wednesday">
+                  
+                </div>
+                <div class="col-md-3">
+                    <label for="field-ta" class="col-sm-12 control-label green-text"> Market Opening time Thursday</label>
+                    
+                 
+                    <input type="text" class="form-control" name ="thursday"  id="thursday" placeholder="please enter details of thursday">
+                    </div>
+                </div>
+                <div class="form-group">
+                <div class="col-md-3">
+                    <label for="field-ta" class="col-sm-12 control-label green-text"> Market Opening time Friday</label>
+                    
+                
+                    <input type="text" class="form-control" name ="friday"  id="friday" placeholder="please enter details of friday">
+                  
+                </div>
+                <div class="col-md-3">
+                    <label for="field-ta" class="col-sm-12 control-label green-text"> Market Opening time Satarday</label>
+                    
+                   
+                    <input type="text" class="form-control" name ="satarday"  id="satarday" placeholder="please enter details of satarday">
+                   
+                </div>
+                <div class="col-md-3">
+                    <label for="field-ta" class="col-sm-12 control-label green-text"> Market Opening time Sunday</label>
+                    
+                   
+                    <input type="text" class="form-control" name ="sunday"  id="sunday" placeholder="please enter details of sunday">
+                    </div>
+                </div>
+                
+
+                <div class="form-group">
+								<label for="field-ta" class="col-sm-3 control-label green-text">Product note</label>
+								
+								<div class="col-sm-5">
+									<textarea class="form-control" name ="productnote"  id="productnote" placeholder="Textarea"></textarea>
+								</div>
+							</div>
+							
+              
+                
+                <div class="form-group">
+                    <div class="col-sm-offset-3 col-sm-5">
+
+                    <input type="hidden" id="productHiddenId" name="productHiddenId">
+            
+                    <button type="submit" value="Add" id="addProductButton" class="btn btn-success">Save</button>
+                    <button type="submit"   value="Update" id="updateProductButton"class="btn btn-orange">Edit</button>
+                    <button type="submit"   value="Delete" id="deleteProductButton"class="btn btn-danger">Delete</button>
+                    <button type="button" value="Add" id="newProductButton" class="btn btn-blue">New</button>
+                    </div>
+                </div>
+          
+            
+        </div>
+</div>
+  </form>
+</div>
 <br />
 
 <!-- <a href="javascript: fnClickAddRow();" class="btn btn-primary">
@@ -290,7 +543,8 @@ Add Row
 
 <br />
 <br />
-
+</body>
+</html>
 <script src="{{asset('assets/backend/dist/js/pages/productlist.js')}}"></script>
 
 @endsection

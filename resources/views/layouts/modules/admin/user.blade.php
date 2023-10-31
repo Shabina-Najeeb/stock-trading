@@ -62,65 +62,112 @@
 					
 				</li>
 
-                <li class="has-sub">
-                <a href="/admin/productlist">
-						<i class="entypo-doc-text"></i>
-						<span class="title">Product Management</span>
-					</a>
-                    <a href="/admin/productlist">
-						<i class="entypo-doc-text"></i>
-						<span class="title">Product List</span>
-					</a>
-                    <a href="/admin/risk">
-						<i class="entypo-doc-text"></i>
-						<span class="title">Risk Control Management</span>
+				<li class="active opened active has-sub">
+					<a href="#">
+						<i class="entypo-gauge"></i>
+						<span class="title">Mwmber Management</span>
 					</a>
 					
-				</li>
-
-
-
-
-<!-- 
-                <li class="has-sub">
-					<a href="/admin/order">
-						<i class="entypo-gauge"></i>
-						<span class="title">Order Management</span>
-					</a>
-                    <ul>
-					<li>
-							<a href="#">
-								<span class="title">Transaction Flow</span>
-							</a>
-						</li>
-                        <li>
-							<a href="#">
-								<span class="title">Closing Log</span>
+					<ul class="visible">
+						<li class="active">
+							<a href="/admin/order">
+								<span class="title">Member List</span>
 							</a>
 						</li>
 						
-					
 					</ul>
-                   	
-				</li> -->
+					<ul class="visible">
+						<li class="active">
+							<a href="/admin/order">
+								<span class="title">Level settings</span>
+							</a>
+						</li>
+						
+					</ul>
+					<ul class="visible">
+						<li class="active">
+							<a href="/admin/order">
+								<span class="title">Member relationship</span>
+							</a>
+						</li>
+						
+					</ul>
+					<ul class="visible">
+						<li class="active">
+							<a href="/admin/order">
+								<span class="title">Wallet management</span>
+							</a>
+						</li>
+						
+					</ul>
+					<ul class="visible">
+						<li class="active">
+							<a href="/admin/order">
+								<span class="title">User wallet</span>
+							</a>
+						</li>
+						
+					</ul>
+				</li>
+                
+
+
+
 				
                 <li class="active opened active has-sub">
 					<a href="#">
 						<i class="entypo-gauge"></i>
-						<span class="title">Order Management</span>
+						<span class="title">Financial Management</span>
 					</a>
 					<ul class="visible">
 						<li class="active">
 							<a href="/admin/order">
-								<span class="title">Transaction Flow</span>
+								<span class="title">Running water record</span>
 							</a>
 						</li>
-						<li>
-							<a href="/admin/order_log">
-								<span class="title">Closing log</span>
-							</a>
-						</li>
+						
 					</ul>
+					<ul class="visible">
+						<li class="active">
+							<a href="/admin/order">
+								<span class="title">Running water record</span>
+							</a>
+						</li>
+						
+					</ul>
+					<ul class="visible">
+						<li class="active">
+							<a href="/admin/order">
+								<span class="title">Recharge record</span>
+							</a>
+						</li>
+						
+					</ul>
+					<ul class="visible">
+						<li class="active">
+							<a href="/admin/order">
+								<span class="title">Withdrawals record</span>
+							</a>
+						</li>
+						
+					</ul>
+					<ul class="visible">
+						<li class="active">
+							<a href="/admin/order">
+								<span class="title">Yu,e Bio Financial</span>
+							</a>
+						</li>
+						
+					</ul>
+					<ul class="visible">
+						<li class="active">
+							<a href="/admin/order">
+								<span class="title">Yu,e Bio Settlement</span>
+							</a>
+						</li>
+						
+					</ul>
+					
 				</li>
                 
 				
@@ -253,7 +300,7 @@
                     <input type="hidden" id="userHiddenId" name="userHiddenId">
             
                     <button type="submit" value="Add" id="addUserButton" class="btn btn-success">Save</button>
-                    <button type="submit"   value="Edit" id="updateUsertButton"class="btn btn-orange">Edit</button>
+                    <button type="submit"   value="Edit" id="updateUserButton"class="btn btn-orange">Edit</button>
                     <button type="submit"   value="Delete" id="deleteUserButton"class="btn btn-danger">Delete</button>
                     <button type="button" value="New" id="newUserButton" class="btn btn-blue">New</button>
                     </div>

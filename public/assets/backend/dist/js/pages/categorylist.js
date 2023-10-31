@@ -1,34 +1,83 @@
 $(document).ready(function(){
-});
     // $("#liPostCategory,#liPostCategoryMobile").click(function(e){
     //     e.preventDefault();
     //     hideAll();
     //     $("#pageCategory").show();
-// alert('hi');
-      
+//  alert('hi');
+        $("#addCategoryButton").show();
+        $('#category_form').on('submit', function(event){
+            event.preventDefault();
+             $.ajax({
+              url:"/admin/addCategory",
+              method:"POST",
+              data: new FormData(this),
+              contentType: false,
+              cache:false,
+              processData: false,
+              dataType:"json",
+              success:function(data)
+              {
+
+                // alert('hi');
+               var html = '';
+               if(data.errors)
+               {
+                html = '<div class="alert alert-danger">';
+                for(var count = 0; count < data.errors.length; count++)
+                {
+                 html += '<p>' + data.errors[count] + '</p>';
+                }
+                html += '</div>';
+               }
+               if(data.success)
+               {
+                html = '<div class="alert alert-success">' + data.success + '</div>';
+                //form reset
+                $('#category_form')[0].reset();
+                //form display
+                $('#categoryname').val(data.user_FormData.categoryname);
+                $('#order').val(data.user_FormData.order);
+               
+                categoryId=data.category_FormData.id;
+                $('#categoryHiddenId').val(categoryId);
+                $('#addCategoryButton').hide();
+                $('#updateCategoryButton,#newCategoryButton').show();
+                categoryTable();
+               }
+               $('#form_result').html(html);
+               $('#categoryTable').show();
+               $('#category_form').hide();
+              }
+        
+              }); 
+        
+           });
+
+        });
        categoryTable();
-        function categoryTable(){
-            $.ajax({
-                url:"/admin/categorylisttable",
-                method:"get",
-                dataType:"json",
-                success:function(data){
-                
-                        var categoryList=Object.values(data);
-                        data += '<tr><th>Order</th><th>Category Name</th><th>Add time</th></tr>';
-                        var data='';
-                        for(var i=0;i<(categoryList[0].length);i++){
-                            data+='<tr><td>'+categoryList[0][i].order+'</td>';
-                            data+='<td>'+categoryList[0][i].categoryname+'</td>';
+       function categoryTable(){
+        $.ajax({
+            url:"/admin/categoryTable",
+            method:"get",
+            dataType:"json",
+            success:function(data){
+          
+                    var categoryList=Object.values(data);
+                    var data='';
+                    data += '<tr><th>Order</th><th>Category Name</th><th>Action</th></tr>';
+                    for(var i=0;i<(categoryList[0].length);i++){
+                     
+                        data+='<tr><td>'+categoryList[0][i].order+'</td>';
+                        data+='<td>'+categoryList[0][i].categoryname+'</td>';
+                    
+                        data+='<td>'+'<div class="option-box"><class="option-list"><button type="button" data-text="View recored" id="'+categoryList[0][i].id+'" class="category-edit-class">';
+                        data+='<span class="btn btn-blue"></span></button></div>'+'</td></tr>';
                         
-                            data+='<td>'+'<div class="option-box"><class="option-list"><button type="button" data-text="View recored" id="'+categoryList[0][i].id+'" class="category-edit-class">';
-                            data+='<span class="btn btn-blue"></span></button></div>'+'</td></tr>';
-                            
-                        }
-                             $('#categoryTbody,#categoryTable').html(data);
-                      }
-                });
-            }
+                    }
+                         $('#categoryTbody,#categoryTable').html(data);
+                  }
+            });
+        }
             $('#newCategoryButton').click(function(e){
                 e.preventDefault();
                 $('#category_form')[0].reset();
@@ -40,14 +89,17 @@ $(document).ready(function(){
             
             });
             
-            $(document).on('click','.category-edit-class',function(e){
-                // alert('hi')
+             $(document).on('click','.category-edit-class',function(e){
+            //    alert('hi');
+            $('#categoryTable').hide();
+            $('#category_form').show();
                 e.preventDefault();
+                
                 var id=$(this).attr('id');
                 $('#addCategoryButton,#newCategryButton').hide();
                 $('#updateCategoryButton,#deleteCategoryButton').show();
                 $.ajax({
-                    url:"/admin/editCategorylist/"+id,
+                    url:"/admin/editCategory/"+id,
                     method:"get",
                     dataType:"json",
                     success:function(data)
@@ -61,7 +113,7 @@ $(document).ready(function(){
                         $('#categoryname').val(data.data.categoryname);
                         $('#order').val(data.data.order);
                         
-                       
+                    
                     
                         
                     }
@@ -77,13 +129,15 @@ $(document).ready(function(){
                   }
                 e.preventDefault();
                 $.ajax({
-                    url:"/admin/deleteCategorylist/"+categoryId,
+                    url:"/admin/deleteCategory/"+categoryId,
                     method:"get",
                     dataType:"json",
                     success:function(response)
                     {
                        categoryId='';          
                        categoryTable();
+                       $('#categoryTable').show();
+                       $('#category_form').hide();
                         
                     }
                 });

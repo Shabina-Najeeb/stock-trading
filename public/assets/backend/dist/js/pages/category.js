@@ -68,9 +68,8 @@ $(document).ready(function(){
                             data+='<td>'+categoryList[0][i].categoryname+'</td>';
                         
                             data+='<td>'+'<div class="option-box"><class="option-list"><button type="button" data-text="View recored" id="'+categoryList[0][i].id+'" class="category-edit-class">';
-                            data+='<span class="btn btn-blue"></span><gcfxgfgfcx/button></div>'+'</td></tr>';
-                            data+='<span class="btn btn-blue"></span>button 2</button></div>'+'</td></tr>';
-
+                            data+='<span class="btn btn-blue"></span></button></div>'+'</td></tr>';
+                            
                         }
                              $('#categoryTbody,#categoryTable').html(data);
                       }
@@ -88,7 +87,7 @@ $(document).ready(function(){
             });
             
             $(document).on('click','.category-edit-class',function(e){
-                // alert('hi')
+                $('#category_form').show();
                 e.preventDefault();
                 var id=$(this).attr('id');
                 $('#addCategoryButton,#newCategryButton').hide();

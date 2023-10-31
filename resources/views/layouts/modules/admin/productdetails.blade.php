@@ -54,7 +54,7 @@
         <ul id="main-menu" class="main-menu">
 				<!-- add class "multiple-expanded" to allow multiple submenus to open -->
 				<!-- class "auto-inherit-active-class" will automatically add "active" class for parent elements who are marked already with class "active" -->
-				<li class="active opened active has-sub">
+                <li class="active opened active has-sub">
 					<a href="/backend">
 						<i class="entypo-gauge"></i>
 						<span class="title">Dashboard</span>
@@ -62,73 +62,59 @@
 					
 				</li>
 
-                <li class="has-sub">
-                <a href="/admin/productlist">
-						<i class="entypo-doc-text"></i>
+         
+
+                <li class="active opened active has-sub">
+					<a href="/admin/producttablelist">
+						<i class="entypo-gauge"></i>
 						<span class="title">Product Management</span>
 					</a>
-                    <a href="/admin/productlist">
-						<i class="entypo-doc-text"></i>
-						<span class="title">Product List</span>
-					</a>
-                    <a href="/admin/risk">
-						<i class="entypo-doc-text"></i>
-						<span class="title">Risk Control Management</span>
-					</a>
-					
-				</li>
-
-
-
-
-<!-- 
-                <li class="has-sub">
-					<a href="/admin/order">
-						<i class="entypo-gauge"></i>
-						<span class="title">Order Management</span>
-					</a>
-                    <ul>
-					<li>
-							<a href="#">
-								<span class="title">Transaction Flow</span>
-							</a>
-						</li>
-                        <li>
-							<a href="#">
-								<span class="title">Closing Log</span>
+					<ul class="visible">
+						<li class="active">
+							<a href="/admin/producttablelist">
+								<span class="title">Product List</span>
 							</a>
 						</li>
 						
-					
 					</ul>
-                   	
-				</li> -->
-				
+                    <ul class="visible">
+						<li class="active">
+							<a href="/admin/risk">
+								<span class="title">Risk Control Management</span>
+							</a>
+						</li>
+						
+					</ul>
+				</li>
+                
                 <li class="active opened active has-sub">
-					<a href="#">
+					<a href="/admin/order">
 						<i class="entypo-gauge"></i>
 						<span class="title">Order Management</span>
 					</a>
 					<ul class="visible">
 						<li class="active">
 							<a href="/admin/order">
-								<span class="title">Transaction Flow</span>
+								<span class="title">Transaction flow</span>
 							</a>
 						</li>
-						<li>
+						
+					</ul>
+                    <ul class="visible">
+						<li class="active">
 							<a href="/admin/order_log">
 								<span class="title">Closing log</span>
 							</a>
 						</li>
+						
 					</ul>
 				</li>
-                
 				
 				
 				
 				
 				
-				</li>
+				
 			</ul>
 			
 		</div>
@@ -216,7 +202,7 @@
                     <label for="field-1" class="col-sm-3 control-label green-text">Product Icon</label>
                     
                     <div class="col-sm-5">
-                        <input type="file" class="form-control"  name= "producticon"id="producticon" placeholder="please add product Icon">
+                        <input type="file" class="form-control"  name= "product_icon"id="product_icon" placeholder="please add product Icon">
                     </div>
                 </div>
             </div>
@@ -431,74 +417,7 @@
 								</div>
 							</div>
 							
-                <!-- <div class="form-group has-error">
-                    <label for="field-4" class="col-sm-3 control-label">Error field</label>
-                    
-                    <div class="col-sm-5">
-                        <input type="text" class="form-control" id="field-4" placeholder="Placeholder">
-                    </div>
-                </div> -->
-                
-                <!-- <div class="form-group has-warning">
-                    <label for="field-5" class="col-sm-3 control-label">Warning field</label>
-                    
-                    <div class="col-sm-5">
-                        <input type="text" class="form-control" id="field-5" placeholder="Placeholder">
-                    </div>
-                </div> -->
-                
-                <!-- <div class="form-group has-success">
-                    <label for="field-6" class="col-sm-3 control-label">Success field</label>
-                    
-                    <div class="col-sm-5">
-                        <input type="text" class="form-control" id="field-6" placeholder="Placeholder">
-                    </div>
-                </div>
-                 -->
-                <!-- <div class="form-group">
-                    <label class="col-sm-3 control-label">Select List</label>
-                    
-                    <div class="col-sm-5">
-                        <select class="form-control">
-                            <option>Option 1</option>
-                            <option>Option 2</option>
-                            <option>Option 3</option>
-                            <option>Option 4</option>
-                            <option>Option 5</option>
-                        </select>
-                    </div>
-                </div> -->
-                
-                <!-- <div class="form-group">
-                    <div class="col-sm-offset-3 col-sm-5">
-                        <div class="checkbox">
-                            <label>
-                                <input type="checkbox">Checkbox 1
-                            </label>
-                        </div>
-                        
-                        <div class="checkbox">
-                            <label>
-                                <input type="checkbox">Checkbox 2
-                            </label>
-                        </div>
-                    </div>
-                </div> -->
-                
-                <!-- <div class="form-group">
-                    <div class="col-sm-offset-3 col-sm-5">
-                        <div class="radio">
-                            <label>
-                                <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>Radio Input 1
-                            </label>
-                        </div>
-                        <div class="radio">
-                            <label>
-                                <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">Radio Input 2
-                            </label>
-                        </div>
-                    </div>
-                </div> -->
+               
                 
                 <div class="form-group">
                     <div class="col-sm-offset-3 col-sm-5">
@@ -506,7 +425,7 @@
                     <input type="hidden" id="productHiddenId" name="productHiddenId">
             
                     <button type="submit" value="Add" id="addProductButton" class="btn btn-success">Save</button>
-                    <button type="submit"   value="Edit" id="updateProductButton"class="btn btn-orange">Edit</button>
+                    <button type="submit"   value="Update" id="updateProductButton"class="btn btn-orange">Edit</button>
                     <button type="submit"   value="Delete" id="deleteProductButton"class="btn btn-danger">Delete</button>
                     <button type="button" value="Add" id="newProductButton" class="btn btn-blue">New</button>
                     </div>
@@ -522,7 +441,7 @@
 
 
 
-<h3>Table without DataTable Header</h3>
+<!-- <h3>Product table</h3>
 
 
 
@@ -531,11 +450,7 @@
 <table class="table table-bordered table-striped datatable" id="productTable">
 <thead>
 <tr>
-    <th>
-        <div class="checkbox checkbox-replace">
-            <input type="checkbox" id="chk-1">
-        </div>
-    </th>
+   
     <th>Sl No</th>
     <th>Product Name</th>
     <th>Product Code</th>
@@ -549,7 +464,7 @@
 
 
 </tbody>
-</table>
+</table> -->
 
 
 
